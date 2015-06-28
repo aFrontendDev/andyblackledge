@@ -23,7 +23,7 @@
 	margin: 0 $ggw/2;
 	max-width: $max-width;
 
-	@media (min-width: $break-point-f) {
+	@media #{$BPF} {
 		margin: 0 auto;
 	}
 }
