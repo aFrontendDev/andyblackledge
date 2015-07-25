@@ -1,0 +1,32 @@
+// introduction.scss
+
+.introduction {
+
+}
+
+.introduction-header {
+
+}
+
+.introduction-title {
+    float: left;
+    padding-bottom: $vr*3;
+    margin-bottom: $vr*3;
+    border-bottom: solid 3px darken($brand-color-a, 15%);
+}
+
+.introduction-subtitle {
+    float: left;
+    clear: left;
+    margin-bottom: $vr*4;
+}
+
+.introduction-header-text {
+    float: left;
+    clear: left;
+    color: $brand-color-d;
+}
+
+.introduction-body {
+
+}

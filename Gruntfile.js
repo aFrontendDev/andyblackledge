@@ -123,6 +123,39 @@ module.exports = function(grunt) {
 			}
 		},
 
+        px_to_rem: {
+			main: {
+				options: {
+					base: 16,
+					fallback: false,
+					fallback_existing_rem: false,
+					ignore: []
+				},
+				files: [{
+					expand: true,
+					flatten: true,
+					src: '<%= project.dist %>/<%= project.distStyles %>/<%= project.mainCss %>',
+					dest: '<%= project.dist %>/<%= project.distStyles %>/'
+				}]
+			}
+		},
+
+		autoprefixer: {
+			options: {
+				browsers: [
+					'last 3 version',
+					'ie 8',
+					'ie 9'
+				]
+			},
+			main: {
+				expand: true,
+				flatten: true,
+				src: '<%= project.dist %>/<%= project.distStyles %>/<%= project.mainCss %>',
+				dest: '<%= project.dist %>/<%= project.distStyles %>/'
+			}
+		},
+
         /*
         * copy - copy across files not already taken care of by sass and concat
         */
@@ -186,6 +219,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build_dev', [
         'sass:dev',
+        'autoprefixer',
+		'px_to_rem',
         'concat:scripts',
         'modernizr',
         'copy'

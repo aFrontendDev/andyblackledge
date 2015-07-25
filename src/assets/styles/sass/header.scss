@@ -1,0 +1,84 @@
+// header.scss
+
+.header {
+
+}
+
+.header-inner {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $vr*4 0;
+
+    .no-flexbox & {
+        display: table;
+        width: 100%;
+    }
+}
+
+.header-logo {
+    position: relative;
+    margin: 0 $ggw*5;
+
+    .no-flexbox & {
+        display: table-cell;
+        text-align: center;
+        width: 50%;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: $ggw*3;
+        height: 1px;
+        background-color: $brand-color-a;
+    }
+
+    &:before {
+        left: 100%;
+    }
+
+    &:after {
+        right: 100%;
+    }
+
+    .logo {
+        margin: 0 $ggw;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: $vr*4;
+        letter-spacing: 10px;
+        padding-left: 10px;
+    }
+}
+
+.header-actions {
+    margin: 0 $ggw;
+
+    .no-flexbox & {
+        display: table-cell;
+    }
+}
+
+.header-actions-left {
+    text-align: left;
+}
+
+.header-actions-right {
+    text-align: right;
+}
+
+.header-action-link {
+    text-decoration: none;
+    color: $color-text;
+    font-size: 30px;
+    margin: 0 10px;
+
+    .icon {
+    }
+}
