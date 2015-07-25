@@ -19,7 +19,10 @@
 }
 
 // Primary Palette
-$brand-color-a: #0095c8; // Primary light blue
+$brand-color-a: #0095c8;    // Light blue
+$brand-color-b: #171d25;    // Dark blue
+$brand-color-c: #d2ec26;    // Bright yellow
+$brand-color-d: #F7E103;    // Another yellow
 
 //social colors
 $color-twitter: #55ACEE;
@@ -31,14 +34,14 @@ $color-pinterest: #cc2127;
 $color-gplus: #DD4B39;
 
 // easy access color names
-$color-text: #333;
+$color-text: #DBDBDB;
 
 
 // Typography
-$font-family-sans-serif: Helvetica, Arial, sans-serif;
-$font-family-serif: "Georgia Pro", Georgia, Times, serif;
+$font-family-sans-serif: "aaarghnormal", Helvetica, Arial, sans-serif;
+$font-family-serif: "cabinmedium", Georgia, Times, serif;
 $font-family-mono: "Anonymous Pro", "Droid Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, "Lucida Console", Courier, monospace;
-$font-family-base: $font-family-sans-serif;
+$font-family-base: $font-family-serif;
 
 // Dimensions
 $max-width: 1180px; // overall max width
@@ -53,14 +56,12 @@ $font-size-small: 14px;
 $line-height-base: $vr*4; // 24px
 $line-height-small: $vr*3; // 18px
 
-$font-weight-bold: 700; // 700 when not using $font-face
-$font-weight-medium: 600; // 600 when not using $font-face
-$font-weight-regular: 400; // 400 when not using $font-face
-$font-weight-light: 100; // 100 when not using $font-face
-
-// Settings
-$directory-images: "../images/css";
-$directory-fonts: "fonts";
+$font-weight-ultra: 900; // 900 when not using @font-face
+$font-weight-extrabold: 800; // 800 when not using @font-face
+$font-weight-bold: 700; // 700 when not using @font-face
+$font-weight-medium: 600; // 600 when not using @font-face
+$font-weight-regular: 400; // 400 when not using @font-face
+$font-weight-light: 100; // 100 when not using @font-face
 
 // Grid system
 $grid-columns: 12;
@@ -89,43 +90,43 @@ $region-c-inner-width: $region-c-width + $ggw;
 // Media Query Break Points (px & em)
 $break-point-a-px: 320px;
 $break-point-a-em-val: 320 / 16;
-$break-point-a-em: $break-point-a-em-val em;
+$break-point-a-em: #{$break-point-a-em-val}em;
 // Set to -px or -em
 $break-point-a: $break-point-a-em;
 
 $break-point-b-px: 480px;
 $break-point-b-em-val: 480 / 16;
-$break-point-b-em: $break-point-b-em-val em;
+$break-point-b-em: #{$break-point-b-em-val}em;
 // Set to -px or -em
 $break-point-b: $break-point-b-em;
 
 $break-point-c-px: 600px;
 $break-point-c-em-val: 600 / 16;
-$break-point-c-em: $break-point-c-em-val em;
+$break-point-c-em: #{$break-point-c-em-val}em;
 // Set to -px or -em
 $break-point-c: $break-point-c-em;
 
 $break-point-d-px: 768px;
 $break-point-d-em-val: 768 / 16;
-$break-point-d-em: $break-point-d-em-val em;
+$break-point-d-em: #{$break-point-d-em-val}em;
 // Set to -px or -em
 $break-point-d: $break-point-d-em;
 
 $break-point-e-px: 980px;
 $break-point-e-em-val: 980 / 16;
-$break-point-e-em: $break-point-e-em-val em;
+$break-point-e-em: #{$break-point-e-em-val}em;
 // Set to -px or -em
 $break-point-e: $break-point-e-em;
 
 $break-point-f-px: 1200px;
 $break-point-f-em-val: 1200 / 16;
-$break-point-f-em: $break-point-f-em-val em;
+$break-point-f-em: #{$break-point-f-em-val}em;
 // Set to -px or -em
 $break-point-f: $break-point-f-em;
 
 $break-point-g-px: 1400px;
 $break-point-g-em-val: 1400 / 16;
-$break-point-g-em: $break-point-g-em-val em;
+$break-point-g-em: #{$break-point-g-em-val}em;
 // Set to -px or -em
 $break-point-g: $break-point-g-em;
 

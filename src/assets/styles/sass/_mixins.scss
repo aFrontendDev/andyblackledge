@@ -5,6 +5,22 @@
 	::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
 }
 
+// Background sizing
+@mixin background-size($size){
+	-webkit-background-size: $size;
+	 -moz-background-size: $size;
+		 -o-background-size: $size;
+			background-size: $size;
+}
+
+// Background sizing
+@mixin background-size($size1, $size2){
+	-webkit-background-size: $size1 $size2;
+	 -moz-background-size: $size1 $size2;
+		 -o-background-size: $size1 $size2;
+			background-size: $size1 $size2;
+}
+
 // Fluid Widths
 // calculates a "fluid" (percentage) width (Ethan Marcotte: target / context = result method: http://alistapart.com/article/fluidgrids)
 @mixin fluid-width($target, $context) {
@@ -63,4 +79,46 @@
 	&:after {
 		clear: both;
 	}
+}
+
+
+@mixin visually-hidden() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Form input appearance
+@mixin appearance($appearance){
+	-webkit-appearance: $appearance;
+	   -moz-appearance: $appearance;
+	    -ms-appearance: $appearance;
+		 -o-appearance: $appearance;
+			appearance: $appearance;
+}
+
+// calc
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+
+@mixin underline-reset() {
+	background: none;
 }

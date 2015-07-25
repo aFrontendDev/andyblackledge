@@ -19,7 +19,7 @@
 
 html {
 	font-size: 100%;
-	background: #fff;
+	background: $brand-color-b;
 	-webkit-overflow-scrolling: touch;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -60,10 +60,6 @@ body {
 img {
 	-ms-interpolation-mode: bicubic;
 	max-width: 100%;
-}
-
-a {
-	text-decoration: none;
 }
 
 .grid {

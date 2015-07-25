@@ -14,7 +14,6 @@
 .main {
 	position: relative;
 	z-index: 1;
-	background-color: #FFF;
 }
 
 .layout {
@@ -147,6 +146,14 @@
 		}
 	}
 
+	.block-size-e {
+		// 75% D
+
+		@media (min-width: $break-point-d) {
+			@include fluid-width(($gcw*9) + ($ggw*8), $region-inner-width);
+		}
+	}
+
 }
 
 .region-a {
@@ -195,4 +202,8 @@
 	p {
 		margin: 0;
 	}
+}
+
+.gridblock-title {
+	color: #fff;
 }
