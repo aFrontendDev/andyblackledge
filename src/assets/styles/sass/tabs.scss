@@ -52,10 +52,10 @@
 .tab-item {
     float: left;
     width: 100%;
-    padding-left: $ggw*2;
     display: none;
 
     @media #{$BPD} {
+        padding-left: $ggw*2;
         position: absolute;
         top:0;
         transform: translateY(100%);
