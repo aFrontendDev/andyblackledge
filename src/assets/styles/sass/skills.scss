@@ -1,0 +1,210 @@
+// skills.scss
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: $vr $ggw;
+        margin-bottom: $vr/3;
+        display: block;
+        float: left;
+        clear: left;
+    }
+}
+.skill-item {
+    transition: width 1200ms ease;
+    transition-delay: 250ms;
+
+    &.skill-item-level-4 {
+        transition-duration: 800ms;
+    }
+    &.skill-item-level-5 {
+        transition-duration: 900ms;
+    }
+    &.skill-item-level-6 {
+        transition-duration: 600ms;
+    }
+    &.skill-item-level-7 {
+        transition-duration: 1000ms;
+    }
+    &.skill-item-level-8 {
+        transition-duration: 500ms;
+    }
+
+    .js & {
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.skill-item-level-1 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 10%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.1);
+    background-color: rgba(50, 219, 4, 0.1);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.1);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.1);
+    }
+}
+.skill-item-level-2 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 20%;
+    }
+    background-color: rgba(204, 0, 0, 0.2);
+    background-color: rgba(50, 219, 4, 0.2);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.2);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.2);
+    }
+}
+.skill-item-level-3 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 30%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.3);
+    background-color: rgba(50, 219, 4, 0.3);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.3);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.3);
+    }
+}
+.skill-item-level-4 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 40%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.4);
+    background-color: rgba(50, 219, 4, 0.4);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.4);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.4);
+    }
+}
+.skill-item-level-5 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 50%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.5);
+    background-color: rgba(50, 219, 4, 0.5);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.5);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.5);
+    }
+}
+.skill-item-level-6 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 60%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.6);
+    background-color: rgba(50, 219, 4, 0.6);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.6);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.6);
+    }
+}
+.skill-item-level-7 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 70%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.7);
+    background-color: rgba(50, 219, 4, 0.7);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.7);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.7);
+    }
+}
+.skill-item-level-8 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 80%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.8);
+    background-color: rgba(50, 219, 4, 0.8);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.8);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.8);
+    }
+}
+.skill-item-level-9 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 90%;
+    }
+
+    background-color: rgba(204, 0, 0, 0.9);
+    background-color: rgba(50, 219, 4, 0.9);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 0.9);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 0.9);
+    }
+}
+.skill-item-level-10 {
+    .no-js &,
+    .js.page-loaded & {
+        width: 100%;
+    }
+
+    background-color: rgba(204, 0, 0, 1);
+    background-color: rgba(50, 219, 4, 1);
+
+    .skills-list-style-b & {
+        background-color: rgba(0, 149, 200, 1);
+    }
+
+    .skills-list-style-c & {
+        background-color: rgba(247, 225, 3, 1);
+    }
+}

@@ -1,14 +1,7 @@
 // layout.less
 
 .page {
-	margin-top: 58px;
-
-	@media (min-width: $break-point-d) {
-		margin-top: 70px;
-	}
-	@media (min-width: $break-point-e) {
-		margin-top: 116px;
-	}
+	margin: $vr*10 0;
 }
 
 .main {
@@ -19,7 +12,7 @@
 .layout {
 	@include clearfix();
 	position: relative;
-	margin: 0 $ggw/2;
+	margin: 0 $ggw;
 	max-width: $max-width;
 
 	@media #{$BPF} {
@@ -154,6 +147,15 @@
 		}
 	}
 
+	.block-size-f {
+		// 50% D - centered
+
+		@media (min-width: $break-point-d) {
+			@include fluid-margin-left(($gcw*3) + ($ggw*2), $region-inner-width);
+			@include fluid-margin-right(($gcw*3) + ($ggw*2), $region-inner-width);
+			@include fluid-width(($gcw*6) + ($ggw*5), $region-inner-width);
+		}
+	}
 }
 
 .region-a {

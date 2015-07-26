@@ -15,6 +15,7 @@ var site = site ? site : {};
 				// init custom
 				// e.g self.myfunction ();
 				//$.publish('pageLoaded', self);
+				site.settings.$html.addClass('page-loaded');
                 PubSub.publish('pageLoaded', self);
 			});
 		},

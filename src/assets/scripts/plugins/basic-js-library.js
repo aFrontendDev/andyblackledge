@@ -53,6 +53,14 @@ window._basic = (function () {
         });
     };
 
+    _Basic.prototype.hasClass = function (el, clazz) {
+        if (el.classList) {
+            return el.classList.contains(clazz);
+        } else {
+            return new RegExp('(^| )' + clazz + '( |$)', 'gi').test(el.clazz);
+        }
+    };
+
     _Basic.prototype.on = (function () {
         if (document.addEventListener) {
             return function (evt, fn) {
@@ -74,31 +82,6 @@ window._basic = (function () {
             };
         }
     }());
-
-    _Basic.prototype.closest = function (elem, selector) {
-        var array = [];
-
-        for (var i = 0; i < elem.length; i++) {
-            var $this = elem[i];
-            var matchesSelector = $this.matches || $this.webkitMatchesSelector || $this.mozMatchesSelector || $this.msMatchesSelector;
-            //console.log($this);
-
-            if (matchesSelector.bind($this)(selector)) {
-                return $this;
-                //array.push($this);
-            } else {
-                $this = $this.parentElement;
-                array.push($this);
-            }
-
-            if (i+1 === elem.length) {
-                var $array = _basic.get(array);
-                return $array;
-            }
-        }
-
-        return false;
-    };
 
     _Basic.prototype.ready = function (fn) {
         if (document.readyState != 'loading'){

@@ -1,18 +1,25 @@
 // introduction.scss
 
 .introduction {
-
+    float: left;
+    width: 100%;
+    margin-bottom: $vr*6;
 }
 
 .introduction-header {
-
+    margin-bottom: $vr*20;
 }
 
 .introduction-title {
-    float: left;
-    padding-bottom: $vr*3;
-    margin-bottom: $vr*3;
-    border-bottom: solid 3px darken($brand-color-a, 15%);
+    display: none;
+
+    @media #{$BPD} {
+        display: block;
+        float: left;
+        padding-bottom: $vr*3;
+        margin-bottom: $vr*3;
+        border-bottom: solid 3px darken($brand-color-a, 15%);
+    }
 }
 
 .introduction-subtitle {
@@ -28,5 +35,10 @@
 }
 
 .introduction-body {
+    float: left;
+    width: 100%;
 
+    @media #{$BPD} {
+        display: flex;
+    }
 }

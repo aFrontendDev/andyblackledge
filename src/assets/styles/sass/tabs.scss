@@ -1,0 +1,94 @@
+// tabs.scss
+
+.tabs {
+
+    @media #{$BPD} {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.tab-link {
+    display: flex;
+    width: 100%;
+    background-color: rgb(7, 122, 161);
+    flex: 1;
+    align-items: center;
+    padding: $vr*4 $ggw;
+    margin: $vr 0;
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: background 150ms, transform 150ms, cubic-bezier(0.4, 0, 1, 1);
+
+    .no-flexbox & {
+        display: block;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:hover,
+    &.tab-link-active {
+        background-color: rgb(14, 182, 239);
+        transform: scale(0.95);
+    }
+}
+
+.tab-content {
+    position: relative;
+
+    @media #{$BPD} {
+        overflow: hidden;
+        height: 300px;
+    }
+}
+
+.tab-item {
+    float: left;
+    width: 100%;
+    padding-left: $ggw*2;
+    display: none;
+
+    @media #{$BPD} {
+        position: absolute;
+        top:0;
+        transform: translateY(100%);
+        transition: visibility 400ms, transform 400ms, ease;
+    }
+
+    &.tab-in {
+        display: block;
+
+        @media #{$BPD} {
+            transform: translateY(0);
+        }
+    }
+    &.tab-out {
+        display: block;
+
+        @media #{$BPD} {
+            transform: translateY(-100%);
+        }
+    }
+    &.tab-show {
+        display: block;
+    }
+}
+
+.tab-item-header {
+
+}
+
+.tab-item-title {
+
+}
+
+.tab-item-body {
+
+}
