@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var Page_A_component_1 = require('./page_a/Page_A.component');
-var Page_B_component_1 = require('./page_b/Page_B.component');
+var home_component_1 = require('./home/home.component');
+var about_component_1 = require('./about/about.component');
+var work_history_component_1 = require('./work_history/work_history.component');
+var blog_component_1 = require('./blog/blog.component');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Angular 2 Template";
+        this.title = "andyblackledge";
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -26,8 +28,10 @@ var AppComponent = (function () {
             ]
         }),
         router_deprecated_1.RouteConfig([
-            { path: '/Page_A', name: 'Page_A', component: Page_A_component_1.PageAComponent },
-            { path: '/Page_B', name: 'Page_B', component: Page_B_component_1.PageBComponent }
+            { path: '/**', name: 'Home', component: home_component_1.HomeComponent },
+            { path: '/about', name: 'About', component: about_component_1.AboutComponent },
+            { path: '/work_history', name: 'Work_History', component: work_history_component_1.Work_HistoryComponent },
+            { path: '/blog', name: 'Blog', component: blog_component_1.BlogComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

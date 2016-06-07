@@ -1,29 +1,72 @@
 <header class="header" id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-	<div class="header-inner">
+    <div class="header-inner">
         <h1 class="header-logo" itemscope itemtype="http://schema.org/WPHeader">
             <a href="/">{{title}}</a>
-        </h1>        
-        <nav class="navigation" id="site-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <a href="#site-navigation" class="skip-link visually-hidden focusable"><h4 class="navigation-title">Navigation</h4></a>
+        </h1>
+        <nav class="primary-navigation" id="site-navigation" aria-label="Primary Navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <a href="#site-navigation" class="skip-link visually-hidden focusable">
+                <h4 class="navigation-title">Navigation</h4>
+            </a>
             <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
             <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
-            <ul class="navigation-menu menu-level-0">
+            <ul>
                 <li>
-                    <a [routerLink]="['Page_A']">Page A</a>
-                    <a [routerLink]="['Page_B']">Page B</a>
+                    <a [routerLink]="['Home']">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['About']">About</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Work_History']">Work History</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Blog']">Blog</a>
                 </li>
             </ul>
-        </nav>        
-	</div>
+        </nav>
+        <nav class="utility-navigation" aria-label="External links" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <ul>
+                <li>
+                    <a href="https://github.com/grumpydev22?tab=repositories" rel="external">
+                        <img src="assets/images/github.svg" alt="github icon" />
+                        <span class="visually-hidden">github repo for grumpydev22</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/andy_blackledge" rel="external">
+                        <img src="assets/images/twitter.svg" alt="twitter icon" />
+                        <span class="visually-hidden">twitter account for @andyblackledge</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://uk.linkedin.com/pub/andrew-blackledge/b0/375/7b4" rel="external">
+                        <img src="assets/images/linkedin.svg" alt="linkedin icon" />
+                        <span class="visually-hidden">linkedin account for andy blackledge</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:blackledge22@gmail.com" rel="external">
+                        <img src="assets/images/email.svg" alt="email icon" />
+                        <span class="visually-hidden">email link for blackledge22@gmail.com</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 <div id="page" class="page">
     <main class="main" id="main" role="main">
         <div class="layout layout-a">
             <div class="region region-a">
                 <div class="region-inner">
-                    <router-outlet></router-outlet>                    
+                    <router-outlet></router-outlet>
                 </div>
             </div>
         </div>
     </main>
+    <footer class="footer" id="site-footer" role="contentinfo">
+        <p>
+            <em>I made a websites.</em> Andy Blackledge. Writer of codes. 2016. <a href="https://github.com/grumpydev22/andyblackledge">Source of the codes (github)</a>
+        </p>
+    </footer>
 </div>

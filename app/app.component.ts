@@ -4,8 +4,10 @@ import {Observable} from 'rxjs/Rx';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 
-import {PageAComponent} from './page_a/Page_A.component';
-import {PageBComponent} from './page_b/Page_B.component';
+import {HomeComponent} from './home/home.component';
+import {AboutComponent} from './about/about.component';
+import {Work_HistoryComponent} from './work_history/work_history.component';
+import {BlogComponent} from './blog/blog.component';
 
 @Component({
     selector: 'my-app',
@@ -17,10 +19,12 @@ import {PageBComponent} from './page_b/Page_B.component';
 })
 
 @RouteConfig([
-    {path: '/Page_A', name: 'Page_A', component: PageAComponent},
-    {path: '/Page_B', name: 'Page_B', component: PageBComponent}
+    {path: '/**', name: 'Home', component: HomeComponent},
+    {path: '/about', name: 'About', component: AboutComponent},
+    {path: '/work_history', name: 'Work_History', component: Work_HistoryComponent},
+    {path: '/blog', name: 'Blog', component: BlogComponent}
 ])
 
 export class AppComponent {
-    title = "Angular 2 Template";
+    title = "andyblackledge";
 }

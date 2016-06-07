@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PageAComponent = (function () {
-    function PageAComponent() {
+var AboutComponent = (function () {
+    function AboutComponent() {
     }
-    PageAComponent = __decorate([
+    AboutComponent = __decorate([
         core_1.Component({
-            selector: 'page_a',
-            templateUrl: 'app/page_a/Page_A.component.html'
+            selector: 'About',
+            templateUrl: 'app/about/about.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], PageAComponent);
-    return PageAComponent;
+    ], AboutComponent);
+    return AboutComponent;
 }());
-exports.PageAComponent = PageAComponent;
-//# sourceMappingURL=Page_A.component.js.map
+exports.AboutComponent = AboutComponent;
+//# sourceMappingURL=about.component.js.map
