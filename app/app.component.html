@@ -1,0 +1,29 @@
+<header class="header" id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+	<div class="header-inner">
+        <h1 class="header-logo" itemscope itemtype="http://schema.org/WPHeader">
+            <a href="/">{{title}}</a>
+        </h1>        
+        <nav class="navigation" id="site-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <a href="#site-navigation" class="skip-link visually-hidden focusable"><h4 class="navigation-title">Navigation</h4></a>
+            <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
+            <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
+            <ul class="navigation-menu menu-level-0">
+                <li>
+                    <a [routerLink]="['Page_A']">Page A</a>
+                    <a [routerLink]="['Page_B']">Page B</a>
+                </li>
+            </ul>
+        </nav>        
+	</div>
+</header>
+<div id="page" class="page">
+    <main class="main" id="main" role="main">
+        <div class="layout layout-a">
+            <div class="region region-a">
+                <div class="region-inner">
+                    <router-outlet></router-outlet>                    
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

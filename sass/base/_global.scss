@@ -1,0 +1,94 @@
+// global
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	word-wrap: break-word;
+	box-sizing: border-box;
+}
+
+@include placeholder(#999);
+
+html {
+	font-size: 100%;
+	background: #FFF;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// Disable iOS/WinMobile font size changes
+	@media screen and (max-device-width: 480px) {
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
+}
+
+body {
+	color: $color-text;
+	font-family: $font-family-base;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-base;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+// For lock scroll module
+.scroll-measure {
+	height: 40px;
+	overflow: hidden;
+	position: absolute;
+	top: -9999px;
+	right: 0;
+	left: 0;
+	z-index: 2000;
+
+	&.scroll,
+	.scroll-locked &{
+		overflow: scroll;
+	}
+
+	> div {
+		@include size(100%);
+
+		position: relative;
+	}
+}
+
+// Prototype website specific CSS
+.title-stylesheet {
+	border-bottom: 1px solid #CCC;
+	font-size: 40px;
+	line-height: $vr*5;
+	margin-bottom: $vr*2;
+	padding-top: $vr*6;
+	padding-bottom: $vr*2;
+	text-align: left;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.subtitle-stylesheet {
+	border-bottom: 1px solid #CCC;
+	color: #BBB;
+	font-size: 18px;
+	line-height: $vr*4;
+	margin-bottom: $vr*4;
+	padding-top: $vr*6;
+	padding-bottom: $vr*2;
+	text-align: left;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+// Component framework specific CSS
+.codeblock-stylesheet {
+	border: 1px solid #CCC;
+	font-size: 12px;
+	margin: 0 0 $vr*4;
+	padding: $vr $vr*2;
+}

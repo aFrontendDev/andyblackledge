@@ -1,0 +1,63 @@
+// type
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	a {
+		text-decoration: none;
+	}
+}
+
+h1,
+.h1,
+.giga {
+	font-size: $vr*10;
+	line-height: $vr*10;
+	margin-bottom: $vr*2;
+}
+
+h2,
+.h2,
+.mega {
+	font-size: $vr*6;
+	line-height: $vr*6;
+	margin-bottom: $vr*2;
+}
+
+h3,
+.h3,
+.alpha {
+	font-size: $vr*5;
+	line-height: $vr*5;
+	margin-bottom: $vr;
+}
+
+h4,
+.h4,
+.beta {
+	font-size: $vr*4;
+	line-height: $vr*4;
+	margin-bottom: $vr*2;
+}
+
+h5,
+.h5,
+.gamma {
+	font-size: $vr*3;
+	line-height: $vr*3;
+	margin-bottom: $vr*2;
+}
+h6,
+.h6,
+.delta {
+	font-size: $font-size-base;
+	line-height: $vr*3;
+	margin-bottom: $vr*2;
+}
+
+p {
+	margin-bottom: $vr*3;
+}
