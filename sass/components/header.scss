@@ -1,0 +1,50 @@
+// header.scss
+
+.header {
+    float: left;
+    width: 100%;
+    padding: $vr*4 $ggw/2;
+
+    @media #{$BPC} {
+        padding: $vr*4 $ggw;
+    } 
+}
+
+.header-logo {
+    @extend .visually-hidden;
+}
+
+.primary-navigation,
+.utility-navigation {
+    float: left;
+    width: 100%;
+    text-align: center;
+
+    @media #{$BPC} {
+        width: auto;
+        text-align: left;
+    }
+
+    ul {
+        @extend .list-unstyled;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 $ggw/2;
+    }
+
+    a {
+        color: $brand-color-e;
+        text-transform: lowercase
+    }
+}
+
+.utility-navigation {
+    margin-bottom: $vr;
+   
+    @media #{$BPC} {
+        margin-bottom: 0;
+        float: right;
+    }
+}

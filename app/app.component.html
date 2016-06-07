@@ -3,28 +3,10 @@
         <h1 class="header-logo" itemscope itemtype="http://schema.org/WPHeader">
             <a href="/">{{title}}</a>
         </h1>
-        <nav class="primary-navigation" id="site-navigation" aria-label="Primary Navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-            <a href="#site-navigation" class="skip-link visually-hidden focusable">
-                <h4 class="navigation-title">Navigation</h4>
-            </a>
-            <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
-            <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
-            <ul>
-                <li>
-                    <a [routerLink]="['Home']">Home</a>
-                </li>
-                <li>
-                    <a [routerLink]="['About']">About</a>
-                </li>
-                <li>
-                    <a [routerLink]="['Work_History']">Work History</a>
-                </li>
-                <li>
-                    <a [routerLink]="['Blog']">Blog</a>
-                </li>
-            </ul>
-        </nav>
         <nav class="utility-navigation" aria-label="External links" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <h2 class="visually-hidden">
+                Utility navigation
+            </h2>
             <ul>
                 <li>
                     <a href="https://github.com/grumpydev22?tab=repositories" rel="external">
@@ -52,6 +34,27 @@
                 </li>
             </ul>
         </nav>
+        <nav class="primary-navigation" id="site-navigation" aria-label="Primary Navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <a href="#site-navigation" class="skip-link visually-hidden focusable">
+                <h4 class="navigation-title">Navigation</h4>
+            </a>
+            <a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
+            <a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
+            <ul>
+                <li>
+                    <a [routerLink]="['Home']">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['About']">About</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Work_History']">Work History</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Blog']">Blog</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 <div id="page" class="page">
@@ -66,7 +69,7 @@
     </main>
     <footer class="footer" id="site-footer" role="contentinfo">
         <p>
-            <em>I made a websites.</em> Andy Blackledge. Writer of codes. 2016. <a href="https://github.com/grumpydev22/andyblackledge">Source of the codes (github)</a>
+            Andy Blackledge. Writer of codes. 2016. <a href="https://github.com/grumpydev22/andyblackledge">Source of the codes (github)</a>
         </p>
     </footer>
 </div>

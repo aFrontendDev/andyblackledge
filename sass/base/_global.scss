@@ -10,7 +10,7 @@
 
 html {
 	font-size: 100%;
-	background: #FFF;
+	background: $brand-color-h;
 	-webkit-overflow-scrolling: touch;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -31,6 +31,10 @@ body {
 
 img {
 	-ms-interpolation-mode: bicubic;
+}
+
+a {
+	text-decoration: none;
 }
 
 // For lock scroll module

@@ -10,15 +10,17 @@
 // Base - unclassed HTML elements
 @import 'base/_global';
 
-// Objects - cosmetic-free design patterns
-@import 'objects/_forms';
-@import 'objects/_layout';
-@import 'objects/fonts';
-@import 'objects/_lists';
-@import 'objects/_type';
+// Scaffolding - cosmetic-free design patterns
+@import 'scaffolding/_forms';
+@import 'scaffolding/_layout';
+@import 'scaffolding/_fonts';
+@import 'scaffolding/_lists';
+@import 'scaffolding/_type';
 
 // Components - designed components, chunks of UI
 @import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
 
 // Helpers
 @import 'utilities/utilities';
