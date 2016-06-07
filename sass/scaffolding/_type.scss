@@ -6,19 +6,30 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $font-family-title;
 	margin-top: 0;
-	
+
 	a {
 		text-decoration: none;
+	}
+
+	strong {
+		font-family: $font-family-title-bold;
 	}
 }
 
 h1,
 .h1,
 .giga {
-	font-size: $vr*10;
-	line-height: $vr*10;
-	margin-bottom: $vr*2;
+	font-size: $vr*7;
+	line-height: $vr*7;
+	margin-bottom: $vr;
+
+	@media #{$BPC} {
+		font-size: $vr*14;
+		line-height: $vr*14;
+		margin-bottom: $vr*2;
+	}
 }
 
 h2,
@@ -26,7 +37,13 @@ h2,
 .mega {
 	font-size: $vr*6;
 	line-height: $vr*6;
-	margin-bottom: $vr*2;
+	margin-bottom: $vr;
+	
+	@media #{$BPC} {
+		font-size: $vr*9;
+		line-height: $vr*9;
+		margin-bottom: $vr*2;
+	}
 }
 
 h3,
@@ -35,6 +52,12 @@ h3,
 	font-size: $vr*5;
 	line-height: $vr*5;
 	margin-bottom: $vr;
+
+	@media #{$BPC} {
+		font-size: $vr*7;
+		line-height: $vr*7;
+		margin-bottom: $vr;
+	}
 }
 
 h4,

@@ -599,7 +599,7 @@ input[type='checkbox'] {
     .checkbox.radio-style-a .radio-replace,
     .checkbox.radio-style-b .radio-replace {
       background-color: transparent;
-      border-color: #639DAC;
+      border-color: #3084EC;
       left: 10px;
       top: 12px; }
     .radio.radio-style-a.checked, .radio.radio-style-b.checked,
@@ -646,7 +646,7 @@ input[type='checkbox'] {
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #639DAC;
+  border: 2px solid #3084EC;
   cursor: pointer;
   display: inline-block;
   line-height: normal;
@@ -836,6 +836,18 @@ input[type='file'] {
   .region-a .block--size-c {
     width: 31.66667%; } }
 
+@font-face {
+  font-family: 'code_bold';
+  src: url("../assets/fonts/code/code_bold-webfont.woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'code_light';
+  src: url("../assets/fonts/code/code_light-webfont.woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .list-unstyled, .primary-navigation ul,
 .utility-navigation ul {
   list-style: none;
@@ -858,6 +870,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "code_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 0; }
   h1 a,
   h2 a,
@@ -866,20 +879,43 @@ h6 {
   h5 a,
   h6 a {
     text-decoration: none; }
+  h1 strong,
+  h2 strong,
+  h3 strong,
+  h4 strong,
+  h5 strong,
+  h6 strong {
+    font-family: "code_bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1,
 .h1,
-.giga {
-  font-size: 3.75rem;
-  line-height: 3.75rem;
-  margin-bottom: 12px; }
+.giga,
+.intro-title {
+  font-size: 2.625rem;
+  line-height: 2.625rem;
+  margin-bottom: 6px; }
+  @media (min-width: 37.5em) {
+    h1,
+    .h1,
+    .giga,
+    .intro-title {
+      font-size: 5.25rem;
+      line-height: 5.25rem;
+      margin-bottom: 12px; } }
 
 h2,
 .h2,
 .mega {
   font-size: 2.25rem;
   line-height: 2.25rem;
-  margin-bottom: 12px; }
+  margin-bottom: 6px; }
+  @media (min-width: 37.5em) {
+    h2,
+    .h2,
+    .mega {
+      font-size: 3.375rem;
+      line-height: 3.375rem;
+      margin-bottom: 12px; } }
 
 h3,
 .h3,
@@ -887,6 +923,13 @@ h3,
   font-size: 1.875rem;
   line-height: 1.875rem;
   margin-bottom: 6px; }
+  @media (min-width: 37.5em) {
+    h3,
+    .h3,
+    .alpha {
+      font-size: 2.625rem;
+      line-height: 2.625rem;
+      margin-bottom: 6px; } }
 
 h4,
 .h4,
@@ -988,12 +1031,12 @@ button::-moz-focus-inner {
       padding: 12px 30px; } }
 
 .btn-style-a {
-  background-color: #639DAC;
-  border-color: #639DAC;
+  background-color: #3084EC;
+  border-color: #3084EC;
   color: #FFF; }
   .btn-style-a:hover, .btn-style-a:focus {
-    background: #4c8290;
-    border-color: #4c8290; }
+    background: #146ad5;
+    border-color: #146ad5; }
 
 .btn-style-b {
   background-color: #009688;
@@ -1079,6 +1122,31 @@ button::-moz-focus-inner {
   text-align: center;
   font-size: 0.875rem;
   padding: 6px 20px; }
+
+.intro {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 37.5em) {
+    .intro {
+      padding-top: 36px; } }
+
+.intro-inner {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-item: center;
+  min-height: 70vh; }
+
+.intro-title {
+  color: #3084EC; }
+
+.intro-body {
+  color: #F44336; }
 
 .hidden {
   display: none !important;

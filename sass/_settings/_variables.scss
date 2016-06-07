@@ -1,7 +1,7 @@
 // variables
 
 // Primary Palette
-$brand-color-a: #639DAC;
+$brand-color-a: #3084EC;
 $brand-color-b: #009688;
 $brand-color-c: #4CAF50;
 $brand-color-d: #F44336;
@@ -31,6 +31,9 @@ $font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Georgia Pro', Georgia, Times, serif;
 $font-family-mono: 'Anonymous Pro', 'Droid Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, 'Lucida Console', Courier, monospace;
 $font-family-base: $font-family-sans-serif;
+
+$font-family-title: 'code_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-title-bold: 'code_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $icon-prefix: 'icon';
 $directory-images: '../images/css';
