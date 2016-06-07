@@ -848,6 +848,38 @@ input[type='file'] {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'icons';
+  src: url("../assets/fonts/icon_font/icons.eot?mylyn7");
+  src: url("../assets/fonts/icon_font/icons.eot?mylyn7#iefix") format("embedded-opentype"), url("../assets/fonts/icon_font/icons.ttf?mylyn7") format("truetype"), url("../assets/fonts/icon_font/icons.woff?mylyn7") format("woff"), url("../assets/fonts/icon_font/icons.svg?mylyn7#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-email:before {
+  content: "\e900"; }
+
+.icon-linkedin:before {
+  content: "\e901"; }
+
+.icon-twitter:before {
+  content: "\e902"; }
+
+.icon-github:before {
+  content: "\e903"; }
+
 .list-unstyled, .primary-navigation ul,
 .utility-navigation ul {
   list-style: none;
@@ -1082,6 +1114,24 @@ button::-moz-focus-inner {
     background: none;
     border: none; }
 
+.link-style-a, .primary-navigation li a {
+  position: relative;
+  transition: color 250ms ease; }
+  .link-style-a:after, .primary-navigation li a:after {
+    transition: width 300ms, color 250ms ease;
+    content: '';
+    display: block;
+    height: 1px;
+    background: #3084EC;
+    width: 0%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%); }
+  .link-style-a:hover, .primary-navigation li a:hover, .link-style-a:focus, .primary-navigation li a:focus {
+    color: #3084EC; }
+    .link-style-a:hover:after, .primary-navigation li a:hover:after, .link-style-a:focus:after, .primary-navigation li a:focus:after {
+      width: 80%; }
+
 .header {
   float: left;
   width: 100%;
@@ -1115,6 +1165,12 @@ button::-moz-focus-inner {
     .utility-navigation {
       margin-bottom: 0;
       float: right; } }
+  .utility-navigation .icon {
+    font-size: 2rem; }
+  .utility-navigation a {
+    transition: color 250ms ease; }
+    .utility-navigation a:hover {
+      color: #3084EC; }
 
 .footer {
   float: left;
@@ -1163,7 +1219,7 @@ button::-moz-focus-inner {
   .clearfix:after {
     clear: both; }
 
-.visually-hidden, .header-logo {
+.visually-hidden, [class^="icon-"] b, [class*=" icon-"] b, .header-logo {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1172,7 +1228,7 @@ button::-moz-focus-inner {
   padding: 0;
   position: absolute;
   width: 1px; }
-  .visually-hidden.focusable:active, .focusable.header-logo:active, .visually-hidden.focusable:focus, .focusable.header-logo:focus {
+  .visually-hidden.focusable:active, [class^="icon-"] b.focusable:active, [class*=" icon-"] b.focusable:active, .focusable.header-logo:active, .visually-hidden.focusable:focus, [class^="icon-"] b.focusable:focus, [class*=" icon-"] b.focusable:focus, .focusable.header-logo:focus {
     clip: auto;
     height: auto;
     margin: 0;

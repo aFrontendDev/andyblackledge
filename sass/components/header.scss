@@ -36,7 +36,16 @@
 
     a {
         color: $brand-color-e;
-        text-transform: lowercase
+        text-transform: lowercase;
+    }
+}
+
+.primary-navigation {
+
+    li {
+        a {
+            @extend .link-style-a;
+        }
     }
 }
 
@@ -46,5 +55,17 @@
     @media #{$BPC} {
         margin-bottom: 0;
         float: right;
+    }
+
+    .icon {
+        font-size: 32px;
+    }
+
+    a {
+        transition: color 250ms ease;
+
+        &:hover {
+            color: $brand-color-a;
+        }
     }
 }
