@@ -1441,8 +1441,11 @@ button::-moz-focus-inner {
   margin-bottom: 0;
   color: #333; }
 
-.article.article-style-a {
-  margin-bottom: 24px; }
+.article {
+  float: left;
+  width: 100%; }
+  .article.article-style-a {
+    margin-bottom: 24px; }
 
 .article-style-a .article-header {
   margin-bottom: 6px; }
@@ -1452,6 +1455,33 @@ button::-moz-focus-inner {
 
 .article-style-a .article-body {
   padding: 0 20px; }
+
+.profile-copy {
+  float: left;
+  width: 100%; }
+  @media (min-width: 48em) {
+    .profile-copy {
+      width: 80%; } }
+
+.profile-media {
+  float: left;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 20%; }
+  @media (min-width: 30em) {
+    .profile-media {
+      padding: 0 30%; } }
+  @media (min-width: 37.5em) {
+    .profile-media {
+      padding: 0 40%; } }
+  @media (min-width: 48em) {
+    .profile-media {
+      padding: 10px;
+      width: 20%; } }
+  .profile-media img {
+    border-radius: 50%;
+    border: solid 4px #AEADAD; }
 
 .hidden {
   display: none !important;

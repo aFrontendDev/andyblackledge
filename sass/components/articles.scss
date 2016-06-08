@@ -2,6 +2,8 @@
 
 
 .article {
+    float: left;
+    width: 100%;
 
     &.article-style-a {
         margin-bottom: $vr*4;
