@@ -217,13 +217,16 @@ button::-moz-focus-inner {
 		position: relative;
 		transform: translateX(-50%);
 	}
-	
-	&:hover,
-	&:focus {
-		color: $brand-color-a;
 
-		&:after {
-			width: 80%;
+	@media #{$BPD} {
+
+		&:hover,
+		&:focus {
+			color: $brand-color-a;
+
+			&:after {
+				width: 80%;
+			}
 		}
 	}
 }

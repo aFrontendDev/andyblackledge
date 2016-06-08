@@ -30,7 +30,10 @@ export class AppComponent {
     showMenu: boolean = false;
 
     onMenuButtonClick() {
-        console.log('1');
         this.showMenu = !this.showMenu;
+    }
+
+    onNavButtonClick() {
+        this.showMenu = false;
     }
 }

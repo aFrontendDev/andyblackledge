@@ -20,8 +20,10 @@ var AppComponent = (function () {
         this.showMenu = false;
     }
     AppComponent.prototype.onMenuButtonClick = function () {
-        console.log('1');
         this.showMenu = !this.showMenu;
+    };
+    AppComponent.prototype.onNavButtonClick = function () {
+        this.showMenu = false;
     };
     AppComponent = __decorate([
         core_1.Component({
