@@ -4,14 +4,14 @@
 .article {
 
     &.article-style-a {
-
+        margin-bottom: $vr*4;
     }
 }
 
 .article-header {
 
     .article-style-a & {
-        margin-bottom: $vr*3;
+        margin-bottom: $vr;
     }
 }
 
@@ -25,4 +25,7 @@
 
 .article-body {
 
+    .article-style-a & {
+        padding: 0 $ggw;
+    }
 }

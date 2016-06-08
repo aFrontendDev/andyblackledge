@@ -978,8 +978,8 @@ h3,
     .h3,
     .alpha,
     .article-style-a .article-title {
-      font-size: 2.625rem;
-      line-height: 2.625rem;
+      font-size: 2.25rem;
+      line-height: 2.25rem;
       margin-bottom: 6px; } }
 
 h4,
@@ -1421,23 +1421,37 @@ button::-moz-focus-inner {
     max-height: 400px;
     opacity: 1; }
 
-.section.section-style-b {
-  margin-bottom: 36px; }
+.section {
+  float: left;
+  width: 100%; }
+  .section.section-style-b {
+    margin: 18px 0; }
+
+.section-style-a .section-header {
+  margin-bottom: 24px; }
 
 .section-style-b .section-header {
   margin-bottom: 18px; }
 
 .section-style-a .section-title {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #3084EC; }
 
 .section-style-b .section-title {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #333; }
+
+.article.article-style-a {
+  margin-bottom: 24px; }
 
 .article-style-a .article-header {
-  margin-bottom: 18px; }
+  margin-bottom: 6px; }
 
 .article-style-a .article-title {
   margin-bottom: 0; }
+
+.article-style-a .article-body {
+  padding: 0 20px; }
 
 .hidden {
   display: none !important;

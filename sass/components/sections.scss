@@ -1,17 +1,23 @@
 // sections.scss
 
 .section {
+    float: left;
+    width: 100%;
 
     &.section-style-a {
 
     }
 
     &.section-style-b {
-        margin-bottom: $vr*6;
+        margin: $vr*3 0;
     }
 }
 
 .section-header {
+
+    .section-style-a & {
+        margin-bottom: $vr*4;
+    }
 
     .section-style-b & {
         margin-bottom: $vr*3;
@@ -23,11 +29,13 @@
     .section-style-a & {
         @extend .mega;
         margin-bottom: 0;
+        color: $brand-color-a;
     }
 
     .section-style-b & {
         @extend .beta;
         margin-bottom: 0;
+        color: $color-text;
     }
 }
 
