@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var AboutComponent = (function () {
     function AboutComponent() {
     }
+    AboutComponent.prototype.toggleOpen = function (event) {
+    };
     AboutComponent = __decorate([
         core_1.Component({
             selector: 'About',

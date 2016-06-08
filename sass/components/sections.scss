@@ -1,0 +1,36 @@
+// sections.scss
+
+.section {
+
+    &.section-style-a {
+
+    }
+
+    &.section-style-b {
+        margin-bottom: $vr*6;
+    }
+}
+
+.section-header {
+
+    .section-style-b & {
+        margin-bottom: $vr*3;
+    }
+}
+
+.section-title {
+
+    .section-style-a & {
+        @extend .mega;
+        margin-bottom: 0;
+    }
+
+    .section-style-b & {
+        @extend .beta;
+        margin-bottom: 0;
+    }
+}
+
+.section-body {
+
+}

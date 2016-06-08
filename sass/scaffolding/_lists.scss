@@ -18,3 +18,13 @@
 		padding: 0;
 	}
 }
+
+.list-style-a {
+	@extend .list-unstyled;
+
+	li {
+		border-bottom: dotted 2px $brand-black;
+		padding-left: $ggw;
+		margin-bottom: $vr*2;
+	}
+}

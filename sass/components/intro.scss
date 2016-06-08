@@ -19,6 +19,7 @@
 
 .intro-title {
     @extend .giga;
+    font-family: $font-family-title;
     color: $brand-color-a;
     //text-shadow: 1px 1px 1px #8C8C8C;
 }
