@@ -14,13 +14,13 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-item: center;
     min-height: 70vh;
 }
 
 .intro-title {
     @extend .giga;
     color: $brand-color-a;
+    //text-shadow: 1px 1px 1px #8C8C8C;
 }
 
 .intro-body {

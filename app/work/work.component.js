@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Work_HistoryComponent = (function () {
-    function Work_HistoryComponent() {
+var WorkComponent = (function () {
+    function WorkComponent() {
     }
-    Work_HistoryComponent = __decorate([
+    WorkComponent = __decorate([
         core_1.Component({
-            selector: 'Work_History',
-            templateUrl: 'app/work_history/work_history.component.html'
+            selector: 'Work',
+            templateUrl: 'app/work/work.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], Work_HistoryComponent);
-    return Work_HistoryComponent;
+    ], WorkComponent);
+    return WorkComponent;
 }());
-exports.Work_HistoryComponent = Work_HistoryComponent;
-//# sourceMappingURL=work_history.component.js.map
+exports.WorkComponent = WorkComponent;
+//# sourceMappingURL=work.component.js.map

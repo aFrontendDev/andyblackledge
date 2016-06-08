@@ -12,12 +12,17 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var home_component_1 = require('./home/home.component');
 var about_component_1 = require('./about/about.component');
-var work_history_component_1 = require('./work_history/work_history.component');
+var work_component_1 = require('./work/work.component');
 var blog_component_1 = require('./blog/blog.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = "andyblackledge";
+        this.showMenu = false;
     }
+    AppComponent.prototype.onMenuButtonClick = function () {
+        console.log('1');
+        this.showMenu = !this.showMenu;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
@@ -30,7 +35,7 @@ var AppComponent = (function () {
         router_deprecated_1.RouteConfig([
             { path: '/**', name: 'Home', component: home_component_1.HomeComponent },
             { path: '/about', name: 'About', component: about_component_1.AboutComponent },
-            { path: '/work_history', name: 'Work_History', component: work_history_component_1.Work_HistoryComponent },
+            { path: '/work', name: 'Work', component: work_component_1.WorkComponent },
             { path: '/blog', name: 'Blog', component: blog_component_1.BlogComponent }
         ]), 
         __metadata('design:paramtypes', [])

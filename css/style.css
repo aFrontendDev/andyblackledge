@@ -403,7 +403,8 @@ body {
   line-height: 1.5rem; }
 
 img {
-  -ms-interpolation-mode: bicubic; }
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%; }
 
 a {
   text-decoration: none; }
@@ -868,6 +869,12 @@ input[type='file'] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-close:before {
+  content: "\e904"; }
+
+.icon-menu:before {
+  content: "\e905"; }
+
 .icon-email:before {
   content: "\e900"; }
 
@@ -1133,12 +1140,57 @@ button::-moz-focus-inner {
       width: 80%; }
 
 .header {
+  display: -ms-flexbox;
+  display: flex;
   float: left;
   width: 100%;
   padding: 24px 10px; }
   @media (min-width: 37.5em) {
     .header {
       padding: 24px 20px; } }
+
+.header-inner {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.header-logo {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  line-height: 0;
+  margin-bottom: 0;
+  width: 40px; }
+  .header-logo a {
+    display: block; }
+
+@media (max-width: 48em) {
+  .navigation-menu {
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 5px #3084EC;
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 350ms ease-in; } }
+
+.navigation-menu-in .navigation-menu {
+  transform: none; }
+
+@media (min-width: 48em) {
+  .navigation-menu {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center; } }
 
 .primary-navigation,
 .utility-navigation {
@@ -1165,12 +1217,40 @@ button::-moz-focus-inner {
     .utility-navigation {
       margin-bottom: 0;
       float: right; } }
-  .utility-navigation .icon {
-    font-size: 2rem; }
   .utility-navigation a {
+    display: block;
     transition: color 250ms ease; }
     .utility-navigation a:hover {
       color: #3084EC; }
+  .utility-navigation .icon {
+    vertical-align: middle;
+    font-size: 2rem; }
+
+.navigation-menu-actions {
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 48em) {
+    .navigation-menu-actions {
+      display: none; } }
+
+.navigation-menu-btn .icon {
+  transition: color 250ms ease;
+  font-size: 1.75rem;
+  vertical-align: middle;
+  color: #404040; }
+
+.navigation-menu-btn:hover .icon {
+  color: #3084EC; }
+
+.navigation-menu-open {
+  display: block; }
+  .navigation-menu-in .navigation-menu-open {
+    display: none; }
+
+.navigation-menu-close {
+  display: none; }
+  .navigation-menu-in .navigation-menu-close {
+    display: block; }
 
 .footer {
   float: left;
@@ -1195,7 +1275,6 @@ button::-moz-focus-inner {
   flex-direction: column;
   -ms-flex-pack: center;
   justify-content: center;
-  align-item: center;
   min-height: 70vh; }
 
 .intro-title {
@@ -1219,7 +1298,7 @@ button::-moz-focus-inner {
   .clearfix:after {
     clear: both; }
 
-.visually-hidden, [class^="icon-"] b, [class*=" icon-"] b, .header-logo {
+.visually-hidden, [class^="icon-"] b, [class*=" icon-"] b {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1228,7 +1307,7 @@ button::-moz-focus-inner {
   padding: 0;
   position: absolute;
   width: 1px; }
-  .visually-hidden.focusable:active, [class^="icon-"] b.focusable:active, [class*=" icon-"] b.focusable:active, .focusable.header-logo:active, .visually-hidden.focusable:focus, [class^="icon-"] b.focusable:focus, [class*=" icon-"] b.focusable:focus, .focusable.header-logo:focus {
+  .visually-hidden.focusable:active, [class^="icon-"] b.focusable:active, [class*=" icon-"] b.focusable:active, .visually-hidden.focusable:focus, [class^="icon-"] b.focusable:focus, [class*=" icon-"] b.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
