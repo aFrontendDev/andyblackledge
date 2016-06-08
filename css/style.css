@@ -1155,14 +1155,15 @@ button::-moz-focus-inner {
   display: flex;
   width: 100%;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .header-logo {
-  -ms-flex-item-align: start;
-  align-self: flex-start;
   line-height: 0;
   margin-bottom: 0;
-  width: 46px; }
+  width: 46px;
+  margin-right: 10px; }
   .header-logo a {
     display: block; }
 
@@ -1213,6 +1214,7 @@ button::-moz-focus-inner {
     @media (min-width: 48em) {
       .primary-navigation li,
       .utility-navigation li {
+        border: none;
         display: inline-block;
         margin: 0 10px; } }
   .primary-navigation a,
