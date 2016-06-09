@@ -11,12 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
-var Item = (function () {
-    function Item() {
-    }
-    return Item;
-}());
-exports.Item = Item;
 var BlogService = (function () {
     function BlogService(http) {
         this.http = http;
@@ -25,15 +19,9 @@ var BlogService = (function () {
     BlogService.prototype.getItems = function () {
         return this.http.get(this.blogUrl)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    // this.http.get('http://localhost:4000/getData')
-    //     .map((res:Response) => res.json())
-    //     .subscribe(
-    //         data => {this.items = data},
-    //         err => console.log(err)
-    // );
     BlogService.prototype.getItem = function (id) {
         return this.getItems()
             .then(function (items) { return items.filter(function (item) { return item._id === id; })[0]; });

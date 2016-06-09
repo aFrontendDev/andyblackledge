@@ -14,6 +14,8 @@ var home_component_1 = require('./home/home.component');
 var about_component_1 = require('./about/about.component');
 var work_component_1 = require('./work/work.component');
 var blog_component_1 = require('./blog/blog.component');
+var blog_service_1 = require('./blog/blog.service');
+var blogpost_component_1 = require('./blog/blogpost.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = "andyblackledge";
@@ -31,7 +33,8 @@ var AppComponent = (function () {
             templateUrl: 'app/app.component.html',
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [
-                router_deprecated_1.ROUTER_PROVIDERS
+                router_deprecated_1.ROUTER_PROVIDERS,
+                blog_service_1.BlogService,
             ]
         }),
         router_deprecated_1.RouteConfig([
@@ -39,6 +42,7 @@ var AppComponent = (function () {
             { path: '/about', name: 'About', component: about_component_1.AboutComponent },
             { path: '/work', name: 'Work', component: work_component_1.WorkComponent },
             { path: '/blog', name: 'Blog', component: blog_component_1.BlogComponent },
+            { path: '/blog/:id', name: 'BlogDetail', component: blogpost_component_1.BlogpostComponent },
             { path: '**', name: 'Home', component: home_component_1.HomeComponent }
         ]), 
         __metadata('design:paramtypes', [])

@@ -12,43 +12,30 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var blog_service_1 = require('./blog.service');
 var blogpost_component_1 = require('./blogpost.component');
-var Item = (function () {
-    function Item() {
-    }
-    return Item;
-}());
-exports.Item = Item;
 var BlogComponent = (function () {
     function BlogComponent(router, blogService) {
         this.router = router;
         this.blogService = blogService;
     }
-    BlogComponent.prototype.ngOnInit = function () {
-        this.getItems();
-    };
     BlogComponent.prototype.getItems = function () {
         var _this = this;
         this.blogService
             .getItems()
             .then(function (items) { return _this.items = items; })
             .catch(function (error) { return _this.error = error; });
-        // this.http.get('http://localhost:4000/getData')
-        //     .map((res:Response) => res.json())
-        //     .subscribe(
-        //         data => {this.items = data},
-        //         err => console.log(err)
-        // );
+    };
+    BlogComponent.prototype.ngOnInit = function () {
+        this.getItems();
     };
     BlogComponent.prototype.onSelect = function (item) {
         this.selectedItem = item;
-        this.router.navigate(['Blogpost', { id: this.selectedItem._id }]);
+        this.router.navigate(['BlogDetail', { id: this.selectedItem._id }]);
     };
     BlogComponent = __decorate([
         core_1.Component({
             selector: 'Blog',
             templateUrl: 'app/blog/blog.component.html',
-            directives: [blogpost_component_1.BlogpostComponent],
-            providers: [blog_service_1.BlogService]
+            directives: [blogpost_component_1.BlogpostComponent]
         }), 
         __metadata('design:paramtypes', [router_deprecated_1.Router, blog_service_1.BlogService])
     ], BlogComponent);
