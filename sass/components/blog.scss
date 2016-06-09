@@ -1,0 +1,44 @@
+// blog.scss
+
+.blog-listings {
+    float: left;
+    width: 100%;
+    margin: $vr*4 0;
+
+    ul {
+        @extend .list-style-a;
+    }
+
+    li {
+        float: left;
+        width: 100%;
+    }
+}
+
+.blog-listing {
+    margin-top: $vr*2;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    color: $color-text;
+    padding: $vr 0;
+    transition: color 250ms ease;
+    
+    @media #{$BPD} { 
+        display: flex;
+        justify-content: space-between;
+        padding-right: $ggw;
+    }
+
+    &:hover {
+        color: $brand-color-a;
+    }
+}
+
+.blog-listing-title {
+    margin-bottom: 0;    
+}
+
+.blog-listing-created {
+
+}

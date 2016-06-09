@@ -38,7 +38,8 @@ var AppComponent = (function () {
             { path: '/', name: 'Home', component: home_component_1.HomeComponent },
             { path: '/about', name: 'About', component: about_component_1.AboutComponent },
             { path: '/work', name: 'Work', component: work_component_1.WorkComponent },
-            { path: '/blog', name: 'Blog', component: blog_component_1.BlogComponent }
+            { path: '/blog', name: 'Blog', component: blog_component_1.BlogComponent },
+            { path: '**', name: 'Home', component: home_component_1.HomeComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

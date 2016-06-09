@@ -890,7 +890,7 @@ input[type='file'] {
 .icon-github:before {
   content: "\e903"; }
 
-.list-unstyled, .list-style-a, .primary-navigation ul,
+.list-unstyled, .list-style-a, .blog-listings ul, .primary-navigation ul,
 .utility-navigation ul, .tab-list {
   list-style: none;
   margin: 0;
@@ -906,7 +906,7 @@ input[type='file'] {
     margin: 0;
     padding: 0; }
 
-.list-style-a li {
+.list-style-a li, .blog-listings ul li {
   border-bottom: dotted 2px #000;
   padding-left: 20px;
   margin-bottom: 12px; }
@@ -1491,6 +1491,35 @@ button::-moz-focus-inner {
   .profile-media img {
     border-radius: 50%;
     border: solid 4px #AEADAD; }
+
+.blog-listings {
+  float: left;
+  width: 100%;
+  margin: 24px 0; }
+  .blog-listings li {
+    float: left;
+    width: 100%; }
+
+.blog-listing {
+  margin-top: 12px;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  color: #333;
+  padding: 6px 0;
+  transition: color 250ms ease; }
+  @media (min-width: 48em) {
+    .blog-listing {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-right: 20px; } }
+  .blog-listing:hover {
+    color: #3084EC; }
+
+.blog-listing-title {
+  margin-bottom: 0; }
 
 .hidden {
   display: none !important;

@@ -1,1 +1,22 @@
-<h2>Blog</h2>
+<section class="section section-style-a block block-size-a">
+    <header class="section-header">
+        <h2 class="section-title">Inside my head</h2>
+    </header>
+    <div class="section-body">
+        <p>
+            I have a blog! To be perfectly honest I've only built this so that I can play around with Angular2 (TS) and Node.js but you never know I might write something interesting or useful here too (maybe).
+        </p>
+        <div class="blog-listings">
+            <ul>
+                <li *ngFor="let item of items">
+                    <article class="blog-listing" (click)="onSelect(item)">
+                        <h4 class="blog-listing-title">{{item.title}}</h4>
+                        <time itemprop="dateCreated" attr.value="{{item.date}}"  class="blog-listing-created">
+                            {{item.dateText}}
+                        </time>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

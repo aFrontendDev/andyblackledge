@@ -22,7 +22,8 @@ import {BlogComponent} from './blog/blog.component';
     {path: '/', name: 'Home', component: HomeComponent},
     {path: '/about', name: 'About', component: AboutComponent},
     {path: '/work', name: 'Work', component: WorkComponent},
-    {path: '/blog', name: 'Blog', component: BlogComponent}
+    {path: '/blog', name: 'Blog', component: BlogComponent},
+    {path: '**', name: 'Home', component: HomeComponent}
 ])
 
 export class AppComponent {
