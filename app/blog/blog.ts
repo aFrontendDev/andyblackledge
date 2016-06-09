@@ -3,4 +3,5 @@ export class Item {
     title: string;
     date: any;
     dateText: string;
+    body: string;
 }

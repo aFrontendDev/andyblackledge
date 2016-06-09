@@ -1,5 +1,14 @@
 <h2>Blog Post</h2>
-
+<!--
 <div *ngIf="item">
     {{item.title}}
-</div>
+    <div [innerHtml]="item.body"></div>
+</div>-->
+
+<section *ngIf="item" class="section section-style-a">
+    <header class="section-header">
+        <h2 class="section-title">{{item.title}}</h2>
+    </header>
+    <div class="section-body" [innerHtml]="item.body">
+    </div>
+</section>
