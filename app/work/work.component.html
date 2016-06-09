@@ -1,1 +1,127 @@
-<h2>Work History</h2>
+<section class="section section-style-a block block-size-a">
+    <header class="section-header">
+        <h2 class="section-title">
+            Work Examples
+        </h2>
+    </header>
+    <div class="section-body">
+        <p>
+            Unfortunately a lot of the work I have done for Building Blocks is either for 'intranet' sites and therefore unavailable to view or has been for sites that require a signup and also are behind ip locks (such as <a href="https://gauloises.de" target="_blank" rel="external">Gauloises <small>opens in new window</small></a> and <a href="https://forthehunters.com" target="_blank" rel="external">For the Hunters <small>opens in new window</small></a>) or simply aren't live yet. 
+        </p>
+        <p>
+            I have worked on some very large brands however and these aren't just landing pages or small microsites, we tend to build new sites in their entirity or provide a framework for them to build from so the impact of our work for the client is often substantial. As lead dev on these sites I'm responsible for the entire front end build even if there are other FE devs on the project, designs are supplied however so I've no design imput, other than to perhaps suggest changes where something isn't really achievable or just isn't a good solution for one reason or another. I'm quite happy that I'm not responsible for design however as it's not something I have any experience or skill in, nor is it an area I'm looking to expand on, I would much prefer to continue progressing as a dedicated developer.
+        </p>
+        <p>
+            Without going into detail (as I can't in some cases), some of the clients I've built for are:
+        </p>
+        <ul>
+            <li><a href="http://www.adidas.co.uk/football" target="_blank" rel="external">Adidas (<small>opens in new window</small>)</a></li>
+            <li><a href="https://tickets2.universalorlando.com/park-tickets/index.html" target="_blank" rel="external">Universal Studios Orlando (<small>opens in new window</small>)</a></li> 
+            <li><a href="https://gauloises.de" target="_blank" rel="external">Gauloises (<small>opens in new window</small>)</a></li>
+            <li><a href="https://forthehunters.com" target="_blank" rel="external">Davidoff (<small>opens in new window</small>)</a></li>
+            <li><a href="https://www.element.com/" target="_blank" rel="external">Element (<small>opens in new window</small>)</a></li>
+            <li><a href="http://www.adama.com/en/brochure/" rel="external" target="_blank">Adama - Global and country sites (<small>opens in new window</small>)</a></li>
+            <li><a href="https://link.dwf.law/tour" rel="external" target="_blank">DWF - tour landing page and intranet (<small>opens in new window</small>)</a></li>
+        </ul>
+        <article class="article article-style-a">
+            <header class="article-header">
+                <h2 class="article-title">Adama Corporate Homepage</h2>
+                <h3 class="article-subtitle">Horizontal and Vertical Navigation</h3>
+                <p><a href="http://www.adama.com/en/brochure/" target="_blank" rel="external">adama.com/en/brochure/ (<small>opens in new window</small>)</a></p>
+            </header>
+            <div class="article-body">
+                <p>
+                    This was one of the first projects I worked on as an FE dev at Building Blocks, I worked with a couple other FE devs to build the front end for this site, my main tasks were the site furniture (header, footer, nav) and the corporate homepage.
+                </p>
+                <p>
+                    It's the corporate homepage I want to talk about here as it was particularly complex, it's essentially 3 horizontal, scrollable sections and a 4th section at the bottom which is a standard vertically scrolling area.
+                </p>
+                <p>
+                    Each horizontal section has a large full height banner and then a number of smaller areas to the right (or left in the RTL version), so almost like a carousel that operates both horizontally and vertically.
+                </p>
+                <p>
+                    <strong>Horizontal Scrolling</strong> - This can take place by 3 methods:
+                </p>
+                <ul>
+                    <li>
+                        Native scrolling via the scroll bar or using a scrollpad on laptop
+                    </li>
+                    <li>
+                        Left &amp; right buttons, JS will calculate and scroll to the next/prev area.
+                    </li>
+                    <li>
+                        Keyboard left &amp; right buttons, JS will also calculate and scroll you to the next/prev area.
+                    </li>
+                </ul>
+                <p>
+                    <strong>Vertical Scrolling</strong> - This can take place by 3 methods:
+                </p>
+                <ul>
+                    <li>
+                        Scroll down with mouse, JS will hijack and scroll for you, calculating and then scrolling to the next section up/down.
+                    </li>
+                    <li>
+                        Keyboard up &amp; down button, the JS will calculate and then scroll to the next section up/down.
+                    </li>
+                    <li>
+                        Nav bar on the side of the screen, either go up down or select a section from the 'pips', JS will calculate and then scroll to the relavant section.
+                    </li>
+                </ul>
+                <p>
+                    This was a very challenging but rewarding piece of work. The layout works by using JS to calculate the widths of each area for each section, we then have a section width that we apply so that the areas can be positioned inside that container then.
+                </p>
+                <p>
+                    Vertically all the sections are inside a container which is the full height of the screen and the sections are scrollable within that div then and for scrolling we just need to know heights and we can scroll to each one as needed.
+                </p>
+                <p>
+                    One of the frustration points of this feature was scroll hijacking with a magic mouse (mac) as there is inertia for each scroll, potentially with some mice on pc's too. So you'd want to scroll the user to the next section on scroll but instead would end up moving 2 or 3 sections down. To get around this I added a timeout to counter the inertia so the scroll is essentially disabled for a moment whilst the JS scroll takes place. Another issue was with trackpads and magic mouse whereby you could scroll horizontal but because there might be some upwards or downwards scroll too the JS scroll event would trigger. To get around this I had to build in some level of tollerance to distinguish between the two.
+                </p>
+            </div>
+        </article>
+        <article class="article article-style-a">
+            <header class="article-header">
+                <h2 class="article-title">Adama Local Contacts</h2>
+                <h3 class="article-subtitle">Google Map</h3>
+                <p><a href="http://www.adama.com/australia/en/contact-us/map/map.html" rel="extenal" target="blank">adama.com/australia/en/contact-us/map/map.html (<small>opens in new window</small>)</a></p>
+            </header>
+            <div class="article-body">
+                <p>
+                    Something I seem to do a lot of is creating maps, at least once per project recently, unfortunately my most recent work is either not yet live or is behind logins and geo-ip blocks (like gauloises.de) so I'll reference Adama again.
+                </p>
+                <p>
+                    This was possibly the first map integration I'd made so I've refined things a little since then but the code is essentially the same. Usually when I've made a map for a client it's to be able to show multiple locations, usually with a 'popup' box to accompany it.
+                </p>
+                <p>
+                    This particular map is a Google map (I've also built maps using Mapbox, very similar) and queries a backend webservice for a list of locations (JSON) which I then cycle through and add to the map. In this example I've used a map plugin to allowing 'clustering' of the pins for when they're very close by each other (<a href="https://github.com/googlemaps/js-marker-clusterer" rel="external">marker clusterer</a>) and I tend to use '<a href="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/" rel="external">infobox</a>' for the popup boxes as you then have complete control over the markup for the popup.
+                </p>
+                <p>
+                    The markup for the popup comes from a mustache template (I prefer seperation of JS and html so I very rarely add markup to the JS and if I do it's only very minor, incedently I also dislike styling through JS, so I'd rather add a class and use css to open/close something as opposed to using jQuery show/hide) which was something new to me at the time of creating this map but is now pretty standard for me (when I need to add markup dynamically).
+                </p>
+                <p>
+                    The map icons were interesting as I had to allow the to be content manageable (everything I build is for a CMS so I have to make everything very robust and allow for it to be modified) and also map them to a map icon type as there were 3-4 different kinds of pins/contact types.
+                </p>
+                <p>
+                    To deal with this I simply used a script block on the page (the backend will update it) that extends the settings for this JS module, allowing the icons to be set, class names to be selected, etc. I then just had to check for these values in the JS and use them if they existed, thereby making it pretty adaptable.
+                </p>
+                <p>
+                    So this map required the use of the google maps api (v3), the integration of marker-clusterer, infobox js and the use of Mustache templating. So all in this simple map required a fair bit of work in the end, a good learning curve though that has given me a good level of knowledge for future work on maps of various kinds and for all manor of requirements.
+                </p>
+            </div>
+        </article>
+        <article class="article article-style-a">
+            <header class="article-header">
+                <h2 class="article-title">Tabs Functionality</h2>
+                <h3 class="article-subtitle">An example of accessable tabs</h3>
+                <p><a href="http://grumpydev22.github.io/" target="_blank" rel="external">grumpydev22.github.io/ (<small>opens in new window</small>)</a></p>
+            </header>
+            <div class="article-body">
+                <p>
+                    This was a piece of functionality I made to demonstrate tab functionality in an accessable fashion and made in my favourite way of approaching work which is to seperate the functionality from the styling.
+                </p>
+                <p>
+                    I've included this in my portfolio mainly to show how I like to work, my preference is always to create functionality as stand alone, so that it could be used anywhere without you having to then try and fight against existing styling that might be attached to a component (as I've seen done some many times and I personally hate). So with these tabs someone could re-use this elsewhere on a site and then just style as required. This is also reflected in my class naming, I like to keep it very generic, so 'tab-style-a' instead of 'tab-red' so we can change style-a to be anything in the future, whereas if tab-red was changed an was no longer red the naming would just be confusing and pointless.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>

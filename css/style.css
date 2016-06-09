@@ -993,7 +993,9 @@ h4,
 
 h5,
 .h5,
-.gamma {
+.gamma,
+.article-style-a .article-subtitle {
+  font-family: "code_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.125rem;
   margin-bottom: 12px; }
@@ -1001,6 +1003,7 @@ h5,
 h6,
 .h6,
 .delta {
+  font-family: "code_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.125rem;
   margin-bottom: 12px; }
@@ -1431,7 +1434,7 @@ button::-moz-focus-inner {
   margin-bottom: 24px; }
 
 .section-style-b .section-header {
-  margin-bottom: 18px; }
+  margin-bottom: 6px; }
 
 .section-style-a .section-title {
   margin-bottom: 0;
@@ -1452,6 +1455,9 @@ button::-moz-focus-inner {
 
 .article-style-a .article-title {
   margin-bottom: 0; }
+
+.article-style-a .article-subtitle {
+  margin: 6px 0; }
 
 .article-style-a .article-body {
   padding: 0 20px; }
@@ -1474,11 +1480,14 @@ button::-moz-focus-inner {
       padding: 0 30%; } }
   @media (min-width: 37.5em) {
     .profile-media {
-      padding: 0 40%; } }
+      padding: 0 35%; } }
   @media (min-width: 48em) {
     .profile-media {
       padding: 10px;
-      width: 20%; } }
+      width: 20%;
+      max-width: 180px;
+      float: right;
+      text-align: right; } }
   .profile-media img {
     border-radius: 50%;
     border: solid 4px #AEADAD; }

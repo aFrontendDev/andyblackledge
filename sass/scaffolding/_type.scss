@@ -71,6 +71,7 @@ h4,
 h5,
 .h5,
 .gamma {
+	font-family: $font-family-title;
 	font-size: $vr*3;
 	line-height: $vr*3;
 	margin-bottom: $vr*2;
@@ -78,6 +79,7 @@ h5,
 h6,
 .h6,
 .delta {
+	font-family: $font-family-title;
 	font-size: $font-size-base;
 	line-height: $vr*3;
 	margin-bottom: $vr*2;

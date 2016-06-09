@@ -25,6 +25,14 @@
     }
 }
 
+.article-subtitle {
+
+    .article-style-a & {
+        @extend .gamma;
+        margin: $vr 0;
+    }
+}
+
 .article-body {
 
     .article-style-a & {
