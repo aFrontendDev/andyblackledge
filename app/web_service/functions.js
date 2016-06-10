@@ -6,7 +6,7 @@ var formidable = require('formidable'); // process form
 // Get and return data from couchDB view - used as a webservice
 module.exports = {
     getData: function (response) {
-        var db = require('monk')('mongodb://localhost:27017/blog');
+        var db = require('monk')('mongodb://52.41.28.64/:27017/blog');
         var blog = db.get('blog');
 
         blog.find({}, function (err, docs){
