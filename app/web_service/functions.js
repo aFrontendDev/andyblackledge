@@ -6,28 +6,16 @@ var formidable = require('formidable'); // process form
 // Get and return data from couchDB view - used as a webservice
 module.exports = {
     getData: function (response) {
+        var db = require('monk')('mongodb://localhost:27017/blog');
+        var blog = db.get('blog');
 
-        var db = nano.db.use('angular_app');
-        var type = 'blogpost';
-        var rows = null;
-        var dataArray = [];
-
-        db.view('tests', 'tests', {'key': type, 'include_docs': true}, function(err, body) {
-            if (!err) {
-                rows = body.rows;
-                rows.forEach(function(row) {
-                    dataArray.push(row.doc);
-                  });
-                console.log('Got data :)');
-            } else {
-              console.log('noooooo');
-            }
-
+        blog.find({}, function (err, docs){
+            //console.log(docs);
             response.setHeader('Content-Type', 'application/json');
             response.writeHead(200, {
                 'content-type': 'application/json'
             });
-            response.end(JSON.stringify(dataArray));
+            response.end(JSON.stringify(docs));
         });
     },
     displayForm: function (response) {

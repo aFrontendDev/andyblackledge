@@ -30,17 +30,20 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "express": "^4.13.4",
+    "formidable": "^1.0.17",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-filter": "^4.0.0",
     "gulp-pxtorem": "^2.0.0",
     "gulp-sass": "^2.3.1",
-    "lite-server": "^2.2.0",
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4",
-    "express": "^4.13.4",
-    "formidable": "^1.0.17",
     "httpdispatcher": "^1.0.0",
-    "nano": "^6.2.0"
+    "lite-server": "^2.2.0",
+    "mongodb": "^1.4.40",
+    "mongoskin": "^2.1.0",
+    "monk": "^1.0.1",
+    "nano": "^6.2.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
   }
 }
