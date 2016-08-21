@@ -7,9 +7,6 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// app.configure(function(){
-//   app.use(express.bodyParser());
-// });
 
 // START *** Settings headers to allow cross domain requests
 app.all('*', function(req, res, next) {
@@ -27,11 +24,7 @@ app.get('/getData', function (request, response) {
 });
 
 app.post('/saveData', function (request, response) {
-    console.log('1');
-    //functions.saveData(request);
-    console.log('request.body.title');
-    console.log(request.body.title);
-    response.end("yes");
+    functions.saveData(request);
 });
 
 app.get('/test', function (request, response) {

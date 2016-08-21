@@ -34,16 +34,11 @@
     <script>
       $(document).ready(function(){
         var title,body;
-        $("#submit").click(function(event){
+        $(".submit-form-action").click(function(event){
           event.preventDefault();
-          title=$("#form_title").val();
-          body=$("#form_body").val();
-          $.post("http://localhost:4000/saveData",{title: title,body: body}, function(data){
-            if(data==='done')
-              {
-                console.log('done');
-              }
-          });
+          title = $(".form-title").val();
+          body = $(".form-body").val();
+          $.post("http://localhost:4000/saveData",{title: title,body: body});
         });
       });
     </script>
@@ -58,15 +53,15 @@
                         <form id="blog-post-form" name="blog-post-form" action="http://localhost:4000/saveData" method="post">
                             <div class="form-group">
                                 <label for="form_title">Title</label>
-                                <input type="text" placeholder="blog post title" id="form_title" name="form_title" />
+                                <input type="text" placeholder="blog post title" id="form_title" class="form-title" name="form_title" />
                             </div>
                             <div class="form-group">
                                 <label for="form_body">Body</label>
-                                <textarea rows="3" cols="10" placeholder="blog post body copy" id="form_body" name="form_body"></textarea>
+                                <textarea rows="3" cols="10" placeholder="blog post body copy" id="form_body" class="form-body" name="form_body"></textarea>
                             </div>
 
                             <div class="form-submit">
-                                <button type="submit" id="submit">Submit</button>
+                                <button type="submit" class="submit-form-action">Submit</button>
                             </div>
                         </form>
 
