@@ -6,7 +6,7 @@ moment().format();
 module.exports = {
     getData: function (response) {
         //var db = require('monk')('mongodb://52.41.28.64/:27017/blog');
-        var db = require('monk')('localhost:27017/blog');
+        var db = require('monk')('visitor:&*reAdtHeB10g!@localhost:27017/blog');
         var blog = db.get('blog');
 
         blog.find({}, function (err, docs){
@@ -31,9 +31,8 @@ module.exports = {
         data.dateText = todayText;
         data.title = request.body.title;
         data.body = request.body.body;
-        var db = require('monk')('localhost:27017/blog');
+        var db = require('monk')('website:bl0gUsr!@localhost:27017/blog');
         var blog = db.get('blog');
-   
 
         blog.insert(data);
         db.close();

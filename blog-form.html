@@ -38,7 +38,15 @@
           event.preventDefault();
           title = $(".form-title").val();
           body = $(".form-body").val();
-          $.post("http://localhost:4000/saveData",{title: title,body: body});
+          $.post("http://localhost:4000/saveData",{title: title,body: body})
+            .done(function() {
+                $('.blog-post-form').trigger('reset');
+                $('.form-response').html('form submitted');
+            })
+            .fail(function(error) {
+                console.log(error);
+                $('.form-response').append('Error: ' + error.statusText + ' : ' + error.responseText);
+            });
         });
       });
     </script>
@@ -50,7 +58,7 @@
                     <div class="region-inner">
                         <h1>Blog Post Entry</h1>
 
-                        <form id="blog-post-form" name="blog-post-form" action="http://localhost:4000/saveData" method="post">
+                        <form class="blog-post-form" id="blog-post-form" name="blog-post-form" action="http://localhost:4000/saveData" method="post">
                             <div class="form-group">
                                 <label for="form_title">Title</label>
                                 <input type="text" placeholder="blog post title" id="form_title" class="form-title" name="form_title" />
@@ -64,6 +72,7 @@
                                 <button type="submit" class="submit-form-action">Submit</button>
                             </div>
                         </form>
+                        <div class="form-response"></div>
 
                     </div>
                 </div>
