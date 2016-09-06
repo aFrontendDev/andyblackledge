@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var pxtorem = require('gulp-pxtorem');
 var autoprefixer = require('gulp-autoprefixer');
+var bundle = require('gulp-bundle-assets');
 
 gulp.task('default', function () {
     return gulp.src('./sass/style.scss')
@@ -15,6 +16,12 @@ gulp.task('default', function () {
     }))
     .pipe(pxtorem())
     .pipe(gulp.dest('css'));
+});
+
+gulp.task('bundle', function() {
+    return gulp.src('./bundle.config.js')
+    .pipe(bundle())
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('sass:watch', function () {
