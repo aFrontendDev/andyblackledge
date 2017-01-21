@@ -1,0 +1,9 @@
+// footer.scss
+.footer {
+    padding: $vr*2 $ggw/2;
+    color: $brand-white;
+
+    @media #{$bp-d-and-up} {
+        padding: $vr*2 $ggw;
+    }
+}

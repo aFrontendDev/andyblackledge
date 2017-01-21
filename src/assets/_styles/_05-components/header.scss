@@ -1,0 +1,16 @@
+// header.scss
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $brand-white;
+    padding: $vr*2 $ggw/2;
+    
+    @media #{$bp-d-and-up} {
+        padding: $vr*2 $ggw;
+    }
+}
+
+.header__title {
+    @extend .visually-hidden;
+}

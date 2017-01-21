@@ -1,0 +1,10 @@
+{
+    "name": "andyblackledge",
+    "title": "AndyBlackledge.co.uk",
+    "description": "My personal site",
+    "styles": "_styles",
+    "scripts": "_scripts",
+    "mainCss": "styles.css",
+    "images": "images",
+    "copyrightYear": "2017"
+}

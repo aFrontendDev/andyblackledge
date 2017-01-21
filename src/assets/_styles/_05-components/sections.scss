@@ -1,0 +1,15 @@
+// sections.scss
+.section {
+
+    &.section--style-a {
+    }
+}
+
+.section__header {
+
+    .section--style-a & {
+    }
+}
+
+.section__title {
+}

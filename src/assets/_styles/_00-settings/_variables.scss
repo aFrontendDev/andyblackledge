@@ -1,0 +1,168 @@
+// variables.scss
+@function parseInt($str, $radix: 10) {
+  $chars: charsFromBase($radix);
+  $result: 0;
+
+  $is-negative: str-index($str, '-') == 1;
+
+  @if $is-negative {
+    $str: str-slice($str, 2);
+  }
+
+  @for $i from 1 through str-length($str) {
+    $char: str-slice($str, -$i, -$i);
+    $value: str-index($chars, $char) - 1;
+    $result: $result + ($value * pow($radix, ($i - 1)));
+  }
+
+  @return if($is-negative, -$result, $result);
+}
+
+// Primary Palette
+$brand-color-a: #ff0000;
+$brand-color-b: #1500ff;
+$brand-color-c: #f6ff00;
+$brand-color-d: #ffaa00;
+$brand-color-e: #00ff25;
+
+// Secondary Palette
+
+// 50 Shades of grey
+$grey-a: #f1f1f1;
+$grey-b: #c5c5c5;
+$grey-c: #909090;
+$grey-d: #505050;
+$grey-e: #303030;
+
+//social colors
+$color-twitter: #55ACEE;
+$color-facebook: #3B5998;
+$color-linkedin: #1C86BD;
+$color-youtube: #cd201f;
+$color-tumblr: #35465d;
+$color-pinterest: #cc2127;
+$color-gplus: #DD4B39;
+
+// Aliases
+$color-text: #333;
+$brand-white: #fafafa;
+$brand-black: #222;
+
+// Dimensions
+$max-width: 1400px;
+$font-size-html: 100%;
+$rem-base: 16px; // 100% browser default font size
+$vertical-rhythm: 6px; // use $vr*X to maintain vertical consistency
+$vr: $vertical-rhythm; // Alias
+
+// Typography
+$font-family-sans-serif: sans-serif;
+$font-family-serif: Georgia, Times, serif;
+$font-family-mono: 'Anonymous Pro', 'Droid Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, 'Lucida Console', Courier, monospace;
+$font-family-base: $font-family-sans-serif;
+
+$icon-prefix: 'icon';
+$directory-images: '../images/css';
+$directory-fonts: 'fonts';
+$icon-font: 'icomoon';
+
+// Font Sizing
+$font-size-base: 16px;
+$font-size-small: 14px;
+$line-height-base: $vr*4; // 24px
+$line-height-small: $vr*3; // 18px
+
+$font-weight-xbold: 800; // 800 when not using $font-face
+$font-weight-bold: 700; // 700 when not using $font-face
+$font-weight-semibold: 600; // 600 when not using $font-face
+$font-weight-medium: 500; // 500 when not using $font-face
+$font-weight-regular: 400; // 400 when not using $font-face
+$font-weight-light: 100; // 100 when not using $font-face
+
+
+// Materialize grid settings
+
+// exact bp
+// Media Query Ranges
+$bp-a: 320px;
+$bp-b: 480px;
+$bp-c: 600px;
+$bp-d: 768px;
+$bp-e: 980px;
+$bp-f: 1200px;
+$bp-g: 1440px;
+
+// convert to EM
+$bp-a-em-val: 320 / 16;
+$bp-b-em-val: 480 / 16;
+$bp-c-em-val: 600 / 16;
+$bp-d-em-val: 768 / 16;
+$bp-e-em-val: 980 / 16;
+$bp-f-em-val: 1200 / 16;
+$bp-g-em-val: 1440 / 16;
+
+$bp-a-em: #{$bp-a-em-val}em;
+$bp-b-em: #{$bp-b-em-val}em;
+$bp-c-em: #{$bp-c-em-val}em;
+$bp-d-em: #{$bp-d-em-val}em;
+$bp-e-em: #{$bp-e-em-val}em;
+$bp-f-em: #{$bp-f-em-val}em;
+$bp-g-em: #{$bp-g-em-val}em;
+
+
+// above bp
+$bp-a-up: 321px;
+$bp-b-up: 481px;
+$bp-c-up: 601px;
+$bp-d-up: 769px;
+$bp-e-up: 981px;
+$bp-f-up: 1201px;
+$bp-g-up: 1441px;
+
+// convert to EM
+$bp-a-up-em-val: 321 / 16;
+$bp-b-up-em-val: 481 / 16;
+$bp-c-up-em-val: 601 / 16;
+$bp-d-up-em-val: 769 / 16;
+$bp-e-up-em-val: 981 / 16;
+$bp-f-up-em-val: 1201 / 16;
+$bp-g-up-em-val: 1441 / 16;
+
+$bp-a-up-em: #{$bp-a-up-em-val}em;
+$bp-b-up-em: #{$bp-b-up-em-val}em;
+$bp-c-up-em: #{$bp-c-up-em-val}em;
+$bp-d-up-em: #{$bp-d-up-em-val}em;
+$bp-e-up-em: #{$bp-e-up-em-val}em;
+$bp-f-up-em: #{$bp-f-up-em-val}em;
+$bp-g-up-em: #{$bp-g-up-em-val}em;
+
+$bp-a-and-up: "only screen and (min-width : #{$bp-b-up-em})" !default;
+$bp-b-and-up: "only screen and (min-width : #{$bp-c-up-em})" !default;
+$bp-c-and-up: "only screen and (min-width : #{$bp-c-up-em})" !default;
+$bp-d-and-up: "only screen and (min-width : #{$bp-d-up-em})" !default;
+$bp-e-and-up: "only screen and (min-width : #{$bp-e-up-em})" !default;
+$bp-f-and-up: "only screen and (min-width : #{$bp-f-up-em})" !default;
+$bp-g-and-up: "only screen and (min-width : #{$bp-g-up-em})" !default;
+
+$bp-a-and-down: "only screen and (max-width : #{$bp-a-em})" !default;
+$bp-b-and-down: "only screen and (max-width : #{$bp-b-em})" !default;
+$bp-c-and-down: "only screen and (max-width : #{$bp-c-em})" !default;
+$bp-d-and-down: "only screen and (max-width : #{$bp-d-em})" !default;
+$bp-e-and-down: "only screen and (max-width : #{$bp-e-em})" !default;
+$bp-f-and-down: "only screen and (max-width : #{$bp-f-em})" !default;
+$bp-g-and-down: "only screen and (max-width : #{$bp-g-em})" !default;
+
+$bp-a-only: "only screen and (min-width : #{$bp-a-em}) and (max-width : #{$bp-b-em})" !default;
+$bp-b-only: "only screen and (min-width : #{$bp-b-up-em}) and (max-width : #{$bp-c-em})" !default;
+$bp-c-only: "only screen and (min-width : #{$bp-c-up-em}) and (max-width : #{$bp-d-em})" !default;
+$bp-d-only: "only screen and (min-width : #{$bp-d-up-em}) and (max-width : #{$bp-e-em})" !default;
+$bp-e-only: "only screen and (min-width : #{$bp-e-up-em}) and (max-width : #{$bp-f-em})" !default;
+$bp-f-only: "only screen and (min-width : #{$bp-f-up-em}) and (max-width : #{$bp-g-em})" !default;
+
+
+// Grid
+$num-cols: 24;
+$gutter-width: 24px;
+$ggw: $gutter-width;
+$element-top-margin: $gutter-width/3;
+$element-bottom-margin: ($gutter-width*2)/3;

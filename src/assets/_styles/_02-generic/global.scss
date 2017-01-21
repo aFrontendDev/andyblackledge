@@ -1,0 +1,51 @@
+// global.scss
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	word-wrap: break-word;
+	box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+@include placeholder(#999);
+
+html {
+	font-size: 100%;
+	background: $brand-white;
+	color: $brand-black;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-y: auto;
+	height: 100%;
+
+	// Disable iOS/WinMobile font size changes
+	@media screen and (max-device-width: 480px) {
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
+}
+
+body {
+	position: relative;
+	font-family: $font-family-base;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-base;
+}
+
+.page {
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+	vertical-align: top;
+	max-width: 100%;
+}

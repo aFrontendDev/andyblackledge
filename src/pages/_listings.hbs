@@ -1,0 +1,71 @@
+---
+title: File List
+hide: true
+---
+
+{{#extend "_pagelist"}}
+	{{#content "master__main"}}
+	<div class="main" id="main" role="main">
+
+		<div class="site-files">
+			<div class="container">
+				<header class="header" role="banner">
+					<h1 class="project-title">
+						{{{global.title}}}
+						<span class="last-modified">
+							<b>Last Modified:</b> <span>{{pageList.0.datePublished}}</span>
+						</span>
+					</h1>
+				</header>
+				<div class="content">
+
+					<h2 class="boilerplate-page-title">Styleguide</h2>
+					<ul class="file-list">
+						<li class="file"><a href="styleguide.html">Styleguide <span>styleguide.html</span></a></li>
+					</ul>
+
+					<div class="boilerplate-page-list" data-page-type="fullPage">
+						<h2 class="boilerplate-page-title">Pages</h2>
+						<ul class="file-list">
+							{{#each pageList}}
+								{{#if data.fullPage}}
+								<li class="file">
+								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								</li>
+								{{/if}}
+							{{/each}}
+						</ul>
+					</div>
+
+					<div class="boilerplate-page-list" data-page-type="uiComponent">
+						<h2 class="boilerplate-page-title">Components</h2>
+						<ul class="file-list">
+							{{#each pageList}}
+								{{#if data.uiComponent}}
+								<li class="file">
+								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								</li>
+								{{/if}}
+							{{/each}}
+						</ul>
+					</div>
+
+					<div class="boilerplate-page-list" data-page-type="layoutPage">
+						<h2 class="boilerplate-page-title">Layout Pages</h2>
+						<ul class="file-list">
+							{{#each pageList}}
+								{{#if data.layoutPage}}
+								<li class="file">
+								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								</li>
+								{{/if}}
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{/content}}
+{{/extend}}
