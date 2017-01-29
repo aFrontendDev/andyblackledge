@@ -19,13 +19,16 @@
 }
 
 // Primary Palette
-$brand-color-a: #ff0000;
-$brand-color-b: #1500ff;
-$brand-color-c: #f6ff00;
-$brand-color-d: #ffaa00;
-$brand-color-e: #00ff25;
+$brand-color-a: #3084EC;
+$brand-color-b: #009688;
+$brand-color-c: #4CAF50;
+$brand-color-d: #F44336;
 
 // Secondary Palette
+$brand-color-e: #404040;
+$brand-color-f: #747172;
+$brand-color-g: #AEADAD;
+$brand-color-h: #f7f7f7;
 
 // 50 Shades of grey
 $grey-a: #f1f1f1;
@@ -33,6 +36,8 @@ $grey-b: #c5c5c5;
 $grey-c: #909090;
 $grey-d: #505050;
 $grey-e: #303030;
+
+$boy-band-blue: #1C1CC3;
 
 //social colors
 $color-twitter: #55ACEE;
@@ -57,14 +62,17 @@ $vr: $vertical-rhythm; // Alias
 
 // Typography
 $font-family-sans-serif: sans-serif;
-$font-family-serif: Georgia, Times, serif;
+$font-family-serif: 'Georgia Pro', Georgia, Times, serif;
 $font-family-mono: 'Anonymous Pro', 'Droid Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, 'Lucida Console', Courier, monospace;
 $font-family-base: $font-family-sans-serif;
 
+$font-family-title: 'code_light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-title-bold: 'code_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 $icon-prefix: 'icon';
 $directory-images: '../images/css';
-$directory-fonts: 'fonts';
-$icon-font: 'icomoon';
+$directory-fonts: 'fonts/icon_font';
+$icon-font: 'icons';
 
 // Font Sizing
 $font-size-base: 16px;

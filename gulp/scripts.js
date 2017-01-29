@@ -47,6 +47,7 @@ gulp.task('scripts-modernizr', function() {
       ]
     }))
     .pipe(environments.production(uglify()))
+    .pipe(uglify())
     .pipe(gulp.dest(config.paths.scripts.dist));
 });
 
@@ -75,6 +76,7 @@ gulp.task('scripts-compile', function() {
 gulp.task('scripts-min', function() {
   return gulp.src([
     config.paths.scripts.src + 'plugins/combine/**/*.js',
+    config.paths.scripts.src + 'plugins/modernizr.tests.js',
     config.paths.scripts.src + 'modules/**/*.js',
     config.paths.scripts.src + '_init.js'
   ])

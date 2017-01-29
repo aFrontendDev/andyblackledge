@@ -36,7 +36,21 @@ body {
 	line-height: $line-height-base;
 }
 
-.page {
+img {
+	-ms-interpolation-mode: bicubic;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
 .content {

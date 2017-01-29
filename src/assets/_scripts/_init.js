@@ -4,9 +4,9 @@
 function ready() {
   if (document.readyState != 'loading'){
     // Add init functions here to page ready
-    example.init();
+    menu.init();
   } else {
-    document.addEventListener('DOMContentLoaded');
+    document.addEventListener('DOMContentLoaded', false);
   }
 }
 

@@ -1,0 +1,41 @@
+// articles.scss
+
+
+.article {
+    float: left;
+    width: 100%;
+
+    &.article-style-a {
+        margin-bottom: $vr*4;
+    }
+}
+
+.article-header {
+
+    .article-style-a & {
+        margin-bottom: $vr;
+    }
+}
+
+.article-title {
+
+    .article-style-a & {
+        @extend .alpha;
+        margin-bottom: 0;
+    }
+}
+
+.article-subtitle {
+
+    .article-style-a & {
+        @extend .gamma;
+        margin: $vr 0;
+    }
+}
+
+.article-body {
+
+    .article-style-a & {
+        padding: 0 $ggw;
+    }
+}

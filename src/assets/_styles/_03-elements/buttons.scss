@@ -167,3 +167,58 @@ button::-moz-focus-inner {
 		border-color: lighten($brand-color-d, 10%);
 	}
 }
+
+.btn--no-style {
+	min-height: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	min-width: 0;
+
+	@media #{$bp-d-and-up} {
+		min-width: 0;
+		min-height: 0;
+		padding: 0;
+		background: none;
+		border: none;
+	}
+
+	&:hover,
+	&:focus {
+		color: inherit;
+		box-shadow: none;
+		padding: 0;
+		background: none;
+		border: none;
+	}
+}
+
+// standard links
+.link--style-a {
+	position: relative;
+	transition: color 250ms ease;
+
+	&:after {
+		transition: width 300ms, color 250ms ease;
+		content: '';
+		display: block;
+		height: 1px;
+		background: $brand-color-a;
+		width: 0%;
+		left: 50%;
+		position: relative;
+		transform: translateX(-50%);
+	}
+
+	@media #{$bp-d-and-up} {
+
+		&:hover,
+		&:focus {
+			color: $brand-color-a;
+
+			&:after {
+				width: 80%;
+			}
+		}
+	}
+}

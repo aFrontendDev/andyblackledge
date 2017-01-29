@@ -23,10 +23,12 @@ h1,
 .title--style-a {
 	@extend .titles;
 	margin-bottom: $vr*2;
-	font-size: 50px;
-	line-height: 60px;
+	font-size: 40px;
+	line-height: 50px;
 
 	@media #{$bp-c-and-up} {
+		font-size: 50px;
+		line-height: 60px;
 	}
 }
 
