@@ -53,6 +53,15 @@ p {
 	}
 }
 
+.page {
+	float: left;
+	width: 100%;
+
+	@media #{$bp-d-and-up} {
+		min-height: calc(100vh - 166px);
+	}
+}
+
 .content {
 	position: relative;
 	z-index: 1;

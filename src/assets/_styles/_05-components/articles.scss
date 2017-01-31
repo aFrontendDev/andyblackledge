@@ -5,37 +5,37 @@
     float: left;
     width: 100%;
 
-    &.article-style-a {
+    &.article--style-a {
         margin-bottom: $vr*4;
     }
 }
 
-.article-header {
+.article__header {
 
-    .article-style-a & {
+    .article--style-a & {
         margin-bottom: $vr;
     }
 }
 
-.article-title {
+.article__title {
 
-    .article-style-a & {
+    .article--style-a & {
         @extend .alpha;
         margin-bottom: 0;
     }
 }
 
-.article-subtitle {
+.article__subtitle {
 
-    .article-style-a & {
+    .article--style-a & {
         @extend .gamma;
         margin: $vr 0;
     }
 }
 
-.article-body {
+.article__body {
 
-    .article-style-a & {
+    .article--style-a & {
         padding: 0 $ggw;
     }
 }

@@ -2,13 +2,13 @@
 * @file _utils - global utilities JavaScript
 */
 var _utils = (function() {
-    var globalObject = {};
+    var self = {};
 
-    globalObject._body = document.body;
+    self._body = document.body;
 
-    globalObject.randomNum = function (min, max) {
+    self.randomNum = function (min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-    return globalObject;
+    return self;
 }());
