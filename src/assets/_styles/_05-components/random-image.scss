@@ -1,0 +1,10 @@
+// random-image.scss
+
+.random-image {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+
+    &.random-image--in {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,39 @@
+// profile.scss
+
+.profile__copy {
+    float: left;
+    width: 100%;
+    
+    @media #{$bp-d-and-up} {
+        width: 80%;
+    }
+}
+
+.profile__media {
+    float: left;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 20%;
+
+    @media #{$bp-b-and-up} {
+        padding: 0 30%;
+    }
+
+    @media #{$bp-c-and-up} {
+        padding: 0 35%;
+    }
+    
+    @media #{$bp-d-and-up} {
+        padding: 10px;
+        width: 20%;
+        max-width: 180px;
+        float: right;
+        text-align: right;
+    }
+
+    img {
+        border-radius: 50%;
+        border: solid 4px $boy-band-blue;
+    }
+}
