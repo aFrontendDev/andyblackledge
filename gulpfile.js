@@ -20,6 +20,7 @@ var build = function(callback) {
 		'scripts',
     'assets',
     'pagelist',
+    'bloglisting',
 		callback
 	);
 };

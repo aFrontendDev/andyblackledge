@@ -19,7 +19,8 @@ var paths = {
 
 	views: {
     src: basePaths.src + 'partials/',
-    pages: basePaths.src + 'pages/'
+    pages: basePaths.src + 'pages/',
+    blogposts: basePaths.src + 'pages/blog/',
   },
 
   data: {
