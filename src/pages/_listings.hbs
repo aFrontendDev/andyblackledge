@@ -28,9 +28,9 @@ hide: true
 						<h2 class="boilerplate-page-title">Pages</h2>
 						<ul class="file-list">
 							{{#each pageList}}
-								{{#if data.fullPage}}
+								{{#if fullPage}}
 								<li class="file">
-								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								    <a href="{{url}}">{{title}} <span>{{url}}</span></a>
 								</li>
 								{{/if}}
 							{{/each}}
@@ -41,9 +41,9 @@ hide: true
 						<h2 class="boilerplate-page-title">Components</h2>
 						<ul class="file-list">
 							{{#each pageList}}
-								{{#if data.uiComponent}}
+								{{#if uiComponent}}
 								<li class="file">
-								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								    <a href="{{url}}">{{title}} <span>{{url}}</span></a>
 								</li>
 								{{/if}}
 							{{/each}}
@@ -54,9 +54,9 @@ hide: true
 						<h2 class="boilerplate-page-title">Layout Pages</h2>
 						<ul class="file-list">
 							{{#each pageList}}
-								{{#if data.layoutPage}}
+								{{#if layoutPage}}
 								<li class="file">
-								    <a href="{{url}}">{{data.title}} <span>{{url}}</span></a>
+								    <a href="{{url}}">{{title}} <span>{{url}}</span></a>
 								</li>
 								{{/if}}
 							{{/each}}

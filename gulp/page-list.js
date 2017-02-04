@@ -43,11 +43,14 @@ module.exports = function(outputFile) {
     var outputPath = relativePath.replace('.hbs', '.html');
 
     var contents = fs.readFileSync(path.relative(process.cwd(), originalPath), 'utf8');
-    var pageData = grayMatter(contents);
+    var grayMatterOutput = grayMatter(contents);
+    // console.log(grayMatterOutput.)
+    var grayMatterData = grayMatterOutput.data;
+    var pageData = grayMatterData;
 
     pageData.url = outputPath;
 
-    if (pageData.data.styleguide === true) {
+    if (pageData.styleguide === true) {
       fileList.unshift(pageData);
     } else {
       fileList.push(pageData);
