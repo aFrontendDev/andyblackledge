@@ -5,7 +5,7 @@ var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('assets', function(callback) {
   runSequence(
-    ['assets-global', 'assets-fonts', 'assets-images', 'assets-temp', 'assets-data', 'assets-plugins'],
+    ['assets-global', 'assets-fonts', 'assets-images', 'assets-temp', 'assets-data', 'web-service', 'assets-plugins'],
     callback
   );
 });
@@ -28,6 +28,11 @@ gulp.task('assets-images', function() {
 gulp.task('assets-temp', function() {
   return gulp.src(config.paths.temp.src + '**/*')
     .pipe(gulp.dest(config.paths.temp.dist));
+});
+
+gulp.task('web-service', function() {
+  return gulp.src(config.paths.webservice.src + '**/*')
+    .pipe(gulp.dest(config.paths.webservice.dist));
 });
 
 gulp.task('assets-data', function() {

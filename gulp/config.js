@@ -53,6 +53,11 @@ var paths = {
     dist: basePaths.dist + 'temp/'
   },
 
+  webservice: {
+    src: basePaths.src + 'web_service/',
+    dist: basePaths.dist + 'web_service/'
+  },
+
   plugins: {
     src: basePaths.src + 'assets/_scripts/plugins/',
     dist: basePaths.dist + '_scripts/'
