@@ -27,11 +27,11 @@ class ComponentSwitch extends React.Component {
     const urlParams = this.props.location;
     const pathname = urlParams.pathname;
     console.log(pathname);
-    const requestedPage = pathname.replace('/', '');
+    const requestedPage = pathname.replace(/[\/]+/g, '');
     console.log(requestedPage);
 
     axios
-    .get(`/_temp/${requestedPage}.json`,{
+    .get(`./_temp/${requestedPage}.json`,{
       urlData: urlParams
     })
     .then(res => {
