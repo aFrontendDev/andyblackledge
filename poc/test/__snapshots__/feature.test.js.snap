@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a feature 1`] = `
+<div
+  className="section-block"
+>
+  <div
+    className="layout layout--a"
+  >
+    <div
+      className="region region--a"
+    >
+      <div
+        className="region-inner"
+      >
+        <article
+          className="block block--size-a feature-test"
+          id="id456"
+        >
+          <h1>
+            Test Feature
+          </h1>
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "some text for this feature",
+              }
+            }
+          />
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render an empty feature 1`] = `
+<div
+  className="section-block"
+>
+  <div
+    className="layout layout--a"
+  >
+    <div
+      className="region region--a"
+    >
+      <div
+        className="region-inner"
+      >
+        <article
+          className="block block--size-a feature-test"
+          id={undefined}
+        >
+          <h1 />
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+          />
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+`;

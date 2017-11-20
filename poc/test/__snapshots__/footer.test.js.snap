@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the footer 1`] = `
+<footer
+  className="footer"
+  role="footer"
+>
+  <small
+    className="footer__copyright"
+  >
+    © Copyright Some Site 2017. All Rights Reserved.
+  </small>
+</footer>
+`;
