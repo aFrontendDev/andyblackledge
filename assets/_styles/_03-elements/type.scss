@@ -1,0 +1,135 @@
+// Type
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	color: $color-text;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+h1,
+.giga,
+.title-style-a {
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	// font-size: 40px;
+	// line-height: $vr*7;
+	margin-bottom: $vr*2;
+
+	@include fluid-type($break-point-a-px, 1920px, 40px, 50px, 'font-size');
+	@include fluid-type($break-point-a-px, 1920px, 44px, 54px, 'line-height');
+
+	// @media #{$BPE} {
+		// font-size: 50px;
+		// line-height: $vr*9;
+	// }
+}
+
+h2,
+.mega,
+.title-style-b {
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	// font-size: 20px;
+	// line-height: $vr*4;
+	margin-bottom: $vr*2;
+
+	@include fluid-type($break-point-a-px, 1920px, 20px, 30px, 'font-size');
+	@include fluid-type($break-point-a-px, 1920px, 24px, 36px, 'line-height');
+
+	// @media #{$BPE} {
+	// 	font-size: 30px;
+	// 	line-height: $vr*6;
+	// }
+}
+
+h3,
+.alpha,
+.title-style-c {
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	// font-size: 18px;
+	// line-height: $vr*4;
+	margin-bottom: $vr*2;
+
+	@include fluid-type($break-point-a-px, 1920px, 18px, 20px, 'font-size');
+	@include fluid-type($break-point-a-px, 1920px, 24px, 30px, 'line-height');
+
+	// @media #{$BPE} {
+	// 	font-size: 20px;
+	// 	line-height: $vr*5;
+	// }
+}
+
+h4,
+.beta,
+.title-style-d {
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold;
+	// font-size: 12px;
+	// line-height: $vr*3;
+	margin-bottom: $vr*2;
+
+	@include fluid-type($break-point-a-px, 1920px, 12px, 16px, 'font-size');
+	@include fluid-type($break-point-a-px, 1920px, 18px, 24px, 'line-height');
+
+	// @media #{$BPE} {
+	// 	font-size: 16px;
+	// 	line-height: $vr*4;
+	// }
+}
+
+h5,
+.gamma,
+.title-style-e {
+	font-family: $font-family-serif;
+	color: $gray-a;
+	// font-size: 16px;
+	line-height: $vr*4;
+	margin-bottom: $vr*2;
+
+	@include fluid-type($break-point-a-px, 1920px, 16px, 18px, 'font-size');
+
+	// @media #{$BPE} {
+	// 	font-size: 18px;
+	// 	line-height: $vr*4;
+	// }
+}
+
+h6,
+.delta,
+.title-style-f {}
+
+// Paragraphs
+p {
+	margin-top: 0;
+	margin-bottom: $vr*2;
+	color: $color-text;
+
+	@include fluid-type($break-point-a-px, 1920px, 14px, 20px, 'font-size');
+	@include fluid-type($break-point-a-px, 1920px, 22px, 28px, 'line-height');
+}
+
+
+// only used on the stylesheet
+.header-stylesheet {
+	border-bottom: 1px solid #CCC;
+	color: #bbb;
+	font-size: 18px;
+	line-height: $vr*4;
+	margin-bottom: $vr*4;
+	padding-top: $vr*6;
+	padding-bottom: $vr*2;
+	text-align: left;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}

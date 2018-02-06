@@ -1,0 +1,14 @@
+// icons-svg
+
+.svg-icon,
+svg {
+    width: 50px;
+}
+
+.svg-icon__stroke {
+    stroke: $brand-black;
+}
+
+.svg-icon__fill {
+    fill: $brand-black;
+}

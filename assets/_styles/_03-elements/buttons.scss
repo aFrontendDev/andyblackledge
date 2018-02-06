@@ -1,0 +1,221 @@
+// Buttons
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+$btn-height-med: 44px;
+$btn-height-lrg: 50px;
+
+$btn-padding: 30px;
+$btn-padding-right-icon-med: 15px;
+$btn-padding-right-icon-lrg: 20px;
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.btn {
+	@include underline-reset();
+
+	background-color: $brand-black;
+	background-image: none;
+	box-shadow: none;
+	border: none;
+	color: $brand-white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-family-base;
+	font-size: 16px;
+	font-weight: $font-weight-bold;
+	margin-bottom: 0; // For input.btn
+	min-height: $btn-height-med;
+	padding: 0 $btn-padding;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 250ms;
+	vertical-align: top;
+	white-space: nowrap;
+	-webkit-font-smoothing: antialiased; // get rid of faux bolding
+	margin-right: 10px;
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+		outline: 0;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		box-shadow: none;
+		cursor: default;
+		pointer-events: none; // Future-proof disabling of clicks
+	}
+
+	&.btn--icon-right {
+		padding-right: $btn-padding + $btn-padding-right-icon-med;
+	}
+
+	.svg-icon {
+		width: 10px;
+	}
+
+	// amend per btn style as needed
+	.svg-icon__stroke,
+	.svg-icon__fill {
+		stroke: currentColor;
+	}
+}
+
+.btn--large {
+	font-size: 20px;
+	min-height: $btn-height-lrg;
+
+	&.btn--icon-right {
+		padding-right: $btn-padding + $btn-padding-right-icon-lrg;
+	}
+}
+
+.btn--icon-right {
+	position: relative;
+
+	.icon,
+	.svg-icon {
+		position: absolute;
+		top: calc(50% - 1px);
+		right: 25px;
+		transition: transform 250ms ease-in-out;
+		transform: perspective(0px) translate(0, -50%);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	&:hover {
+
+		.icon,
+		.svg-icon {
+			transform: translate(4px, -50%);
+		}
+	}
+}
+
+
+.btn--style-a {
+	background-color: $brand-color-a;
+	border-color: $brand-color-a;
+	color: $brand-white;
+
+	&.disabled,
+	&[disabled] {
+		opacity: 1;
+		background-color: #FFC4C4;
+
+		&:after {
+			background-color: #FFB1AE;
+		}
+	}
+
+	&.btn--large {
+		font-size: 18px;
+	}
+
+	&:hover {
+		background: #FF3535;
+
+		&:after {
+			transform: translateY(2px);
+		}
+	}
+
+	&:focus {
+		background-color: $brand-color-a;
+
+		&:after {
+			background-color: $brand-color-a;
+			transform: none;
+		}
+	}
+}
+
+.btn--style-b {
+	$btn-style-b-color: #D91A14;
+	background-color: transparent;
+	border: solid 2px $brand-color-b;
+	color: $brand-color-b;
+	font-size: 14px;
+
+	.svg-icon {
+		width: 8px;
+		top: calc(50% - 1px);
+	}
+
+	.svg-icon__stroke {
+		stroke: $brand-color-b;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $btn-style-b-color;
+		color: $btn-style-b-color;
+
+		.svg-icon__stroke {
+			stroke: $btn-style-b-color;
+		}
+	}
+
+	&.disabled,
+	&[disabled] {
+		border-color: #FFC4C4;
+		color: #FFC4C4;
+
+		.svg-icon__stroke {
+			stroke: #FFC4C4;
+		}
+	}
+}
+
+.btn--style-c {
+	background-color: transparent;
+	color: $brand-color-a;
+	font-size: 14px;
+	padding-left: 0;
+
+	.svg-icon {
+		width: 8px;
+		top: calc(50% - 1px);
+	}
+
+	.svg-icon__stroke {
+		stroke: $brand-color-a;
+	}
+
+	&:hover,
+	&:focus {
+		color: $brand-color-b;
+		text-decoration: underline;
+
+		.svg-icon__stroke {
+			stroke: $brand-color-b;
+		}
+	}
+
+	&.disabled,
+	&[disabled] {
+		color: $gray-b;
+
+		.svg-icon__stroke {
+			stroke: $gray-b;
+		}
+	}
+}

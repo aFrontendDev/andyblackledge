@@ -1,0 +1,36 @@
+// Lists
+
+ul,
+ol {
+	margin: $vr*2 0;
+	padding-left: $ggw;
+}
+
+.list--unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.list-style-a {
+	list-style: none;
+	padding: 0;
+	margin: $vr*7 0;
+
+	li {
+		position: relative;
+		padding-left: 30px;
+		margin: 26px 0;
+	}
+
+	li:before {
+		content: '\2666';
+    position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+    height: 80%;
+    font-size: 11px;
+    color: currentColor;
+	}
+}

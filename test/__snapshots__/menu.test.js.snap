@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the menu 1`] = `
+<div
+  className="menu "
+>
+  <button
+    className="btn btn--unstyled menu__close-btn"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+  <ul
+    className="nav"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/test"
+      >
+        Test
+      </a>
+    </li>
+    <li>
+      <a
+        href="/dynamic/123"
+      >
+        Dynamic Page
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`should render the menu with menuIn prop set 1`] = `
+<div
+  className="menu menu--in"
+>
+  <button
+    className="btn btn--unstyled menu__close-btn"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+  <ul
+    className="nav"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/test"
+      >
+        Test
+      </a>
+    </li>
+    <li>
+      <a
+        href="/dynamic/123"
+      >
+        Dynamic Page
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`should simulate menu close btn press 1`] = `
+<div
+  className="menu "
+>
+  <button
+    className="btn btn--unstyled menu__close-btn"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+  <ul
+    className="nav"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/test"
+      >
+        Test
+      </a>
+    </li>
+    <li>
+      <a
+        href="/dynamic/123"
+      >
+        Dynamic Page
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`should simulate menu close btn press 2`] = `
+<div
+  className="menu "
+>
+  <button
+    className="btn btn--unstyled menu__close-btn"
+    onClick={[Function]}
+  >
+    Close
+  </button>
+  <ul
+    className="nav"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/test"
+      >
+        Test
+      </a>
+    </li>
+    <li>
+      <a
+        href="/dynamic/123"
+      >
+        Dynamic Page
+      </a>
+    </li>
+  </ul>
+</div>
+`;

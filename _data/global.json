@@ -1,0 +1,12 @@
+{
+    "name": "Boilerplate",
+    "title": "Boilerplate",
+    "description": "Boilerplate project setup",
+    "clientImage": "",
+    "clientLogo": "",
+    "styles": "_styles",
+    "scripts": "_scripts",
+    "mainCss": "styles.css",
+    "images": "images",
+    "copyrightYear": "2018"
+}

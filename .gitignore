@@ -29,5 +29,10 @@ node_modules
 
 # generated components
 dist
-src/assets/styles/less/_mixins/_combined.less
-.sass-cache/
+build
+test/results
+backstop_data/bitmaps_test
+FRONTEND.md
+TODO.md
+_combined.less
+/_pages/index.html

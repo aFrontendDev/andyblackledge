@@ -1,0 +1,51 @@
+{
+  "example": [
+    {
+      "component": "promo",
+      "title" : "Promo Title",
+      "tags"  : [ "paper", "rock", "scissors" ],
+      "id"    : 1,
+      "image" : {
+        "small" : "http://unsplash.it/320/320",
+        "med" : "http://unsplash.it/900/600",
+        "lrg" : "http://unsplash.it/1600/900"
+      },
+      "ctas": [
+        {
+          "href": "http://bbc.co.uk",
+          "text": "bbc"
+        },
+        {
+          "href": "http://google.com",
+          "text": "google"
+        }
+      ]
+    },
+    {
+      "component": "promo",
+      "title" : "Another Promo",
+      "tags"  : [ "paper", "rock", "scissors" ],
+      "id"    : 2,
+      "image" : {
+        "small" : "http://unsplash.it/320/320",
+        "med" : "http://unsplash.it/900/600",
+        "lrg" : "http://unsplash.it/1600/900"
+      },
+      "ctas": [
+        {
+          "href": "http://guardian.co.uk",
+          "text": "guardian"
+        },
+        {
+          "href": "http://bing.com",
+          "text": "bing"
+        }
+      ]
+    },
+    {
+      "component": "test",
+      "title": "Test Component",
+      "bodyCopy": "lorem ipsum dolor"
+    }
+  ]
+}
