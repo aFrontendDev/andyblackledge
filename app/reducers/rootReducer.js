@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux';
 import menuReducer from './menuReducer';
+import { blogPostsSuccess, blogPostsError} from './blogReducer';
+
 
 
 const appReducer = combineReducers({
-  menuIsIn: menuReducer
+  menuIsIn: menuReducer,
+  blogPostsSuccess,
+  blogPostsError
 });
 
 const rootReducer = (state, action) => {
