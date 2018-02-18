@@ -12,10 +12,30 @@ export function getPostsSuccess(posts) {
   };
 }
 
+export function getPostSuccess(post) {
+  return {
+    type: "GET_POST_SUCCESS",
+    post
+  };
+}
+
 export function getPostsError(bool) {
   return {
     type: "GET_POSTS_ERROR",
     getPostsError: bool
+  }
+}
+
+export function getPostError(bool) {
+  return {
+    type: "GET_POST_ERROR",
+    getPostError: bool
+  }
+}
+
+export function clearPost() {
+  return {
+    type: "CLEAR_POST"
   }
 }
 
@@ -40,5 +60,23 @@ export function getPosts(skip, amount, posts) {
       dispatch(getPostsError(true));
     });
 
+  };
+}
+
+// get individual post from contentful api
+export function getPost(id, post) {
+  console.log(id);
+
+  return (dispatch) => {
+
+    client.getEntry(id)
+      .then(entry => {
+        console.log(entry);
+        dispatch(getPostSuccess(entry));
+      })
+      .catch(err => {
+        console.log(err);
+        dispatch(getPostError(true));
+      });
   };
 }

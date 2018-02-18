@@ -14,8 +14,6 @@ class BlogPosts extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // console.log('newProps');
-    // console.log(newProps);
 
     this.setState({
       posts: newProps.posts
@@ -39,9 +37,11 @@ class BlogPosts extends React.Component {
         {
           this.state.posts.map((item, index) => {
             const jsonData = item.fields;
+            const postId = item.sys.id;
+            const itemClick = this.props.viewPost.bind(this, postId);
 
             return(
-              <div key={index}>
+              <div key={index} onClick={itemClick}>
                 <h2>
                   {jsonData.title}
                 </h2>
@@ -57,7 +57,8 @@ class BlogPosts extends React.Component {
 
 BlogPosts.propTypes = {
   getPosts: PropTypes.func,
-  posts: PropTypes.array
+  posts: PropTypes.array,
+  viewPost: PropTypes.func
 }
 
 
